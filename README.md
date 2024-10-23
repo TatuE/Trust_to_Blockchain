@@ -1,2 +1,2 @@
-# Trust_to_Blockchain
-ICT Security Basics - from Trust to Blockchain, a course taught at Haaga-Helia University of Applied Sciences by Tero Karvinen
+# Trust to Blockchain 2024
+__**README under construction**__
