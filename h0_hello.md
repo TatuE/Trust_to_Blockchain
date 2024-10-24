@@ -16,4 +16,4 @@ This exercise is the first, easy step towards version control systems. Even thou
 
 ## Assignment answer
 
-A new project repositry created in an existing GitHub Account. I encourage you to check out he other repositories.
+A new project repositry created in an existing GitHub Account. I encourage you to check out the other repositories.
