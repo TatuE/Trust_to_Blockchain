@@ -198,7 +198,7 @@ Once you click the "I'm not a robot" button at the website, it copies malicious 
 
 Now, as the Krebs report states, GitHub users are most likely more vigilant and aware than the average PC user and changes are that not that many fell to this trap, but what if this was less targeted and affected regular PC users? The likelihood of success would most likely increase drastically.
 
-The incident report does not describe how target selection was made for this, but I would assume that the emails have been compromised with the association to GitHub, manual reconnaissance and target selection seems to be too far fetched in this case.
+The incident report does not describe how target selection was made for this, but I would assume that the emails have been compromised with the association to GitHub (compromised emailing list perhaps), manual reconnaissance and target selection seems to be too far fetched in this case.
 
 [Malpedia](https://malpedia.caad.fkie.fraunhofer.de/details/win.lumma) states that Lumma Stealer is developed by a threat actor Shamel (also using the alias Lumma) and is available through a Malware-as-a-Service (MaaS) model. Origin most likely from Russia (Made available on Russian speaking forums), but at this stage I cannot find confirmation on this. It seems that the primary target of this is cryptocurrency wallets and two-factor authentication (2FA) browser extensions, which would mean that the end goal is monetary gain. This could be done by extorsion, blackmail, by the theft of cryptocurrency assets or by selling the hijacked credentials.
 
@@ -348,6 +348,49 @@ Let's select the graphical installation.
 
 ### d
 
+I will try and analyze the security incident described in [assignment b](h1_Adversarial_mindset.md#b) using the Mitre ATT&CK Enterprise Matrix.
+I will do this in a chronological order by the factors I can find.
+
+1. Tactic: Resource Development
+    - Technique: Obtain Capabilities
+    - Procedure: The threat actor buys a license (presumably since its a Maas model) for the Lumma Stealer malware.
+
+2. Tactic: Reconnaissance
+    - Technique: Gather Victim Identity Information
+    - Sub-technique: Email Addresses
+    - Procedure: The threat actor acquires GitHub user emails from a compromised emailing list (presumably)
+
+3. Tactic: Initial Access
+    - Technique: Phishing
+    - Sub-technique:  Spearphishing Link
+    - Procedure: The threat actor sends users an email warning account/repository vulnerability, containing a link to a web site that tries to make the user run malicious powershell code on their computer.
+
+4. Tactic: Execution
+    - Technique: User Execution
+    - Sub-technique: Malicious Link 
+    - Procedure: The users clicks on a link, which copies malicious powershell code to the target computers clipboard. If the user does a the link describes, the user will execute the power shell code, which downloads a malware to the target computer.
+
+5. Tactic: Collection
+    - Technique: Automated Collection
+    - Procedure: The Lumma Stealer malware searches for credential and bitcoin wallet information using regex, copies files if set criteria is met.
+
+6. Tactic: Exfiltration
+    - Technique: Automated Exfiltration
+    - Procedure: The malware sends the copied credential and/or bitcoin wallet data to a C2 server via HTTP POST request.
+
+7. Tactic: Impact
+    - Technique: Financial Theft
+    - Procedure: The threat actor used the Lumma Stealer malware to steal the targets cryptocurrency wallet.
+
+8. Tactic: Impact
+    - Technique: Account Access Removal
+    - Procedure: The threat actor used the Lumma Stealer malware to steal the targets credentials and use them to lock the account.
+
+9. Tactic: Impact
+    - Technique: Financial Theft
+    - Procedure: The threat actor ransoms the locked user accounts the the targets.
+
+
 ### e
 
 I will approach this question in a more general, non-technical fashion. Meaning that I will try to answer this question if it was asked by a "regular", non IT person.
@@ -360,5 +403,5 @@ I'm not trying to over simplify things, but usually the weakest link in security
 ### f
 
 I would not say that anything is missing from these, since in my opinion they answer their given purpose, but I would like to make an addition to the ATT&CK Enterprise Matrix.
-The ATT&CK Enterprise Matrix documents tactics, techniques and procedures well and gives advice on detecting and mitigating these, but what I would like to is links to more technical information regarding techniques and sub-techniques. By technical information I mean practical examples and more detailed exploit descriptions.
+The Mitre ATT&CK Enterprise Matrix documents tactics, techniques and procedures well and gives advice on detecting and mitigating these, but what I would like to is links to more technical information regarding techniques and sub-techniques. By technical information I mean practical examples and more detailed exploit descriptions.
 I know that this most likely is not what the Enterprise Matrix is intended to provide and there is a danger that i would become bloated.
