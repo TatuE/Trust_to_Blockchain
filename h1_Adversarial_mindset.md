@@ -38,6 +38,10 @@
 
 #### Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains
 
+The document summarized can be read at the Lockheed Martin website : [Intelligence-Driven Computer Network Defense
+Informed by Analysis of Adversary Campaigns and
+Intrusion Kill Chains](https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf)
+
 - Introduces the concept of an Intrusion Kill Chain, to engage and mitigate intrusions by APT:s (Advanced Persistent Threat).
     - APT:s are a new class of security threat that are manually operated and more focused, they poses a more complex threat than threats deemed more "traditional", such as worms and viruses.   
 - The Intrusion Kill Chain consists of seven (7) phases used by the attacker in sequence:
@@ -59,12 +63,14 @@
 
 ### Darknet Diaries, episode 83: NSA Cryptologist
 
-I chose this episode randomly, since the last episode is numbered at 150, I would assume the first is 1. The $RANDOM bash function decided for me (*echo $((1 + $RANDOM % 150))*). R
-As far as the name goes, I'm pleased with the result.
+I chose this episode randomly, since the last episode is numbered at 150, I would assume the first is 1. The RANDOM bash function decided for me (*echo $((1 + $RANDOM % 150))*). R
+As far as the name goes, I'm pleased with the result. The episode can be found at the Darknet Diaries website : [EP 83: NSA Cryptologists](https://darknetdiaries.com/episode/83/) 
 
 #### Episode summary
 
 ### ATT&CK Enterprise Matrix
+
+The documents summarized can be read at the Mitre Corporation website: [Mitre ATT&CK FAQ](https://attack.mitre.org/resources/faq/), [Mitre ATT&CK Enterprise Matrix](https://attack.mitre.org/matrices/enterprise/)
 
 - A large, bi-annually updated knowledge repository, that consists of tactics and techniques used by cyber security threat actors. created and maintained by the Mitre Corporation.
 - Consists of two parts:
@@ -114,7 +120,7 @@ I don't know if this is a tough question, since I had to contemplate on it for a
 The Cyber Kill Chain benefits most people and organizations working in or with cyber security, since it deals more on on active and adaptive defense measures.
 I see the ATT&CK Enterprise Matrix benefiting system and network administrators, since it provides knowledge on how to defend against intrusion tactics and techniques that are already documented.
 There is also the notion that both parties would benefit from both models, since I see these two models working side by side strengthening each other as stated before.
-There is also a third group that would benefit from these models, maybe a bit indirectly with out dwelling too much on the technical side and these are the decision makers, CEO:S, COO:s and CTO:s. Reviewing these should raise the question "are doing enough", "should we do more", "Are we already doing something".
+There is also a third group that would benefit from these models, maybe a bit indirectly with out dwelling too much on the technical side and these are the decision makers, CEO:S, COO:s and CTO:s. Reviewing these should raise the question "are we doing enough", "should we do more", "Are we already doing something".
 
 ### b
 
@@ -139,158 +145,130 @@ It has been a few years since I last used Virtualbox, I have had little need to 
     - Desktop: KDE plasma 6 (Wayland)
     - Package manager: pacman
 
-#### Installation
+#### Virtualbox Installation
 
 I usually review the Arch linux wiki for information, just in case. [Virtualbox Arch wiki page](https://wiki.archlinux.org/title/VirtualBox).
 
+Update the system. Review upgrades if there is any and aprove if deemed acceptable (This step is not mentioned again, but it's always a good practice to even glance what you are about to update)
+- *sudo pacman -Syu*
 
-- Update the system
-    - *sudo pacman -Syu*
-- Review upgrades if there is any and aprove if deemed acceptable (This step is not mentioned again, but it's always a good practice to even glance what you are about to update)
-    - *y*
-- Reboot system if required
-- Install Virtualbox and the required dependencies if there is any. Note that the Arch linux offers three (3) different host module packages, consult the Arch wiki page for the right one for you. In my case it is "virtualbox-host-modules-arch", since I only use the LTS kernel as a backup option.
-    - *sudo pacman -S virtualbox*
-- Reboot system or manually load the Virtualbox kernel module.
-    - To load manually *sudo modprobe vboxdrv*
-- Other considerations regarding the installation on Arch linux 
-    - To enable USB access from the host machine, add user to the vboxusers group. I am not planning on using this now.
-        - *sudo usermod -a -G vboxusers username*
-    - **Extension pack**, this is a new feature for me. The Oracle VM VirtualBox Extension Pack should provide additional features, but I don't think we need them now.
-- Start the regular Virtualbox guidelines
+Reboot system if required.
+
+Install Virtualbox and the required dependencies if there is any. Note that the Arch linux offers three (3) different host module packages, consult the Arch wiki page for the right one for you. In my case it is "virtualbox-host-modules-arch", since I only use the LTS kernel as a backup option.
+- *sudo pacman -S virtualbox*
+
+Reboot system or manually load the Virtualbox kernel module.
+- To load manually *sudo modprobe vboxdrv*
+
+Other considerations regarding the installation on Arch linux.
+- To enable USB access from the host machine, add user to the vboxusers group. I am not planning on using this now.
+    - *sudo usermod -a -G vboxusers username*
+- **Extension pack**, this is a new feature for me. The Oracle VM VirtualBox Extension Pack should provide additional features, but I don't think we need them now.
+Start the regular Virtualbox GUI.
     - *VirtualBox*
 
 ![Arch linux Virtualbox installation](/img/virtual_box_install.png)
 
-- Download the installation ISO image from the [Debian home page](https://www.debian.org/)
-- Create a new virtual machine in Virtualbox.
-    - Click the *New* icon
-        - Set VM name
-        - Set VM location, the default location (user home folder) is OK, since we probably don't have access rights outside our home folder (no super user privileges used)
-        - Select ISO image
-        - Check "Skip unattended Installation", since we want to do things manually. 
-        - Click *Next*
+#### Virtual machine installation
 
-        ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_1.png)
+Download the installation ISO image from the [Debian home page](https://www.debian.org/)
+Create a new virtual machine in Virtualbox.
 
-    - Select memmory amount and processor count, let's stick with the defaults.
-        - Click *Next*
-    - Create a virtual hard disc for the Virtual machine. 
-        - 20 GB is OK for this test.
-        - No pre-allocation needed, pre-allocation reserves the entire disc size, instead of used space.
-        - Click *Next*
-    -  Review and click finish if everything is in order.
+- Click the *New* icon
+    - Set VM name
+    - Set VM location, the default location (user home folder) is OK, since we probably don't have access rights outside our home folder (no super user privileges used)
+- Select ISO image
+    - Check "Skip unattended Installation", since we want to do things manually. 
+     Click *Next*
+- Select memory amount and processor count, let's stick with the defaults.
+    - Click *Next*
+- Create a virtual hard disc for the Virtual machine. 
+    - 20 GB is OK for this test.
+    - No pre-allocation needed, pre-allocation reserves the entire disc size, instead of used space.
+    - Click *Next*
+-  Review and click finish if everything is in order.
 
-    | Memory                                | Virtual hard disc                             | Review                                |
-    | -----------------------------------   | --------------------------------------------- | ------------------------------------- |
-    | ![](/img/Virtualbox_vm_install_2.png) | ![](/img/Virtualbox_vm_install_3.png)         | ![](/img/Virtualbox_vm_install_4.png) |
+| New VM                                | Memory                                | Virtual hard disc                             | Review                                |
+| ------------------------------------- | -----------------------------------   | --------------------------------------------- | ------------------------------------- |
+| ![](/img/Virtualbox_vm_install_1.png) | ![](/img/Virtualbox_vm_install_2.png) | ![](/img/Virtualbox_vm_install_3.png)         | ![](/img/Virtualbox_vm_install_4.png) |
 
-    - Start the VM by clickin *Start*
+Start the VM by clicking *Start*
 
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_5.png)
-        - And at this stage I remembered that I have disabled the virtualization support on the motherboard. Don't enable it if you are not using it they say...
-        ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_6.png)
-        - Let's reboot the system and make the necessary changes in the UEFI and try again.
-        ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_7.png)
-        - Everything seems to be in order now.
-    - Let's select the graphical installation.
-    - Select installation language, English will do in our case.
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_8.png)
-    - Select location, Finland can be found under the "Other" selection, but let's just say we are in the US.
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_9.png)
-    - Select keyboard layout. NOTE! US usually uses an ANSI keyboard layout, which is ok but I prefer ISO (used in Finland for example).
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_10.png)
-    - Let the installation run....
-    - Select hostname for the new VM. "vbox" is OK in this case, but you should select a unique hostname for each computer for the sake of convenience.
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_11.png)
-    - No domain name needed, but let's use something that should be safe => *.local*
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_12.png)
+![](/img/Virtualbox_vm_install_5.png)
 
-    - Set password for the root (system administrator) account. 
+And at this stage I remembered that I have disabled the virtualization support on the motherboard. Don't enable it if you are not using it they say...
+Let's reboot the system and make the necessary changes in the UEFI and try again.
 
-        - Let's use something short this time, since this is a test installation. Otherwise you should use a good password, preferably randomly generated with with letters (small and large), numbers and special characters.
-        
-        ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_13.png)
+![](/img/Virtualbox_vm_install_6.png)
 
-    - Create a user account, let's use the same username as the host system. Note, usually the system asks your'e name and generates a username based on that. I like to skip this and define my username manually.
+Everything seems to be in order now.
 
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_14.png)
+![](/img/Virtualbox_vm_install_7.png)
 
-    - Add a password fot the new user account.
+#### Debian Virtual machine installation
 
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_15.png)
+Let's select the graphical installation.
+- Select installation language, English will do in our case.
+- Select location, Finland can be found under the "Other" selection, but let's just say we are in the US.
+- Select keyboard layout. NOTE! US usually uses an ANSI keyboard layout, which is ok but I prefer ISO (used in Finland for example).
+- Select hostname for the new VM. "vbox" is OK in this case, but you should select a unique hostname for each computer for the sake of convenience.
 
-    - Configure system clock, select time zone. Note, the VM thinks we are in the US..
+| Language                              | Location                              | Kayboard layout                               | Hostname                              |
+| ------------------------------------- | -----------------------------------   | --------------------------------------------- | ------------------------------------- |
+| ![](/img/Virtualbox_vm_install_8.png) | ![](/img/Virtualbox_vm_install_9.png) | ![](/img/Virtualbox_vm_install_10.png)        | ![](/img/Virtualbox_vm_install_11.png)|
 
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_16.png)
+- No domain name needed, but let's use something that should be safe => *.local*
+- Set password for the root (system administrator) account.
+    - Let's use something short this time, since this is a test installation. Otherwise you should use a good password, preferably randomly generated with with letters (small and large), numbers and special characters.
+- Create a user account, let's use the same username as the host system. Note, usually the system asks your'e name and generates a username based on that. I like to skip this and define my username manually.
+- Add a password fot the new user account.
+- Configure system clock, select time zone. Note, the VM thinks we are in the US..
 
-    - Select how the disc is particioned. Let's stick to the default in this case.
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_17.png)
-
-    - Select disc used (only one available as a default)
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_18.png)
-
-    - Confirm choices and continue
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_19.png)
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_20.png)
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_21.png)
-
-    - Wait for the installation to complete
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_22.png)
-
-    - No need to scan for another installation media
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_23.png)
-
-    - Select location and mirror to be used with the package manager 
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_24.png)
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_25.png)
-
-    - No need for a proxy
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_26.png)
-
-    - Wait for the package manager configuration.
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_27.png)
-
-    - Let's not participate in this for now.
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_28.png)
-
-    - Select desktop environment and system utilities, KDE plasma is usually a good choice, xfce is another good choice.
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_29.png)
-
-    - Wait for the installation to finish
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_30.png)
-
-    - Install CRUB boot loader, select the VM system disc for this.
-
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_31.png)
-    ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_32.png)
-
-    - Wait for the installation to finnish and click *Continue* to reboot the new VM.
-
-     ![Virtualbox Debian VM installation](/img/Virtualbox_vm_install_33.png)
-
-     - Once the VM reboots, select the default choice in GRUB (or just wait) and you can log in to you're new VM
-
-     ![](/img/Virtualbox_vm_install_34.png) 
-     ![](/img/Virtualbox_vm_install_35.png)
+| Domain name                               | Root password                                 | User account                                  | User account password                     | System Clock                              |
+| ----------------------------------------- | --------------------------------------------- | --------------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![](/img/Virtualbox_vm_install_12.png)    | ![](/img/Virtualbox_vm_install_13.png)        | ![](/img/Virtualbox_vm_install_14.png)        | ![](/img/Virtualbox_vm_install_15.png)    | ![](/img/Virtualbox_vm_install_16.png)    | 
 
 
+- Select how the disc is partitioned. Let's stick to the default in this case.
+- Select disc used (only one available as a default)
+- Confirm choices and continue
+
+| Disc partitioning                         | Disc selection                                | Partitioning options                          |  Partitioning overview                    | Partitioning confirmation                 |
+| ----------------------------------------- | --------------------------------------------- | --------------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![](/img/Virtualbox_vm_install_17.png)    | ![](/img/Virtualbox_vm_install_18.png)        | ![](/img/Virtualbox_vm_install_19.png)        | ![](/img/Virtualbox_vm_install_20.png)    | ![](/img/Virtualbox_vm_install_21.png)    | 
+
+- Wait for the installation to complete
+
+![](/img/Virtualbox_vm_install_22.png)
+
+- No need to scan for another installation media for the package manager.
+- Select location and mirror to be used with the package manager 
+- No need for a proxy
+- Wait for the package manager configuration.
+
+| Additional media                          | Mirror country                                | Mirror address                                |  HTTP proxy                               | Configuration                             |
+| ----------------------------------------- | --------------------------------------------- | --------------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![](/img/Virtualbox_vm_install_23.png)    | ![](/img/Virtualbox_vm_install_24.png)        | ![](/img/Virtualbox_vm_install_25.png)        | ![](/img/Virtualbox_vm_install_26.png)    | ![](/img/Virtualbox_vm_install_27.png)    | 
 
 
+- Let's not participate in this for now.
+
+![](/img/Virtualbox_vm_install_28.png)
+
+- Select desktop environment and system utilities, KDE plasma is usually a good choice, xfce is another good choice.
+- Wait for the installation to finish
+- Install CRUB boot loader, select the VM system disc for this.
+- Wait for the installation to finnish and click *Continue* to reboot the new VM.
+
+| Desktop environment & utilities           | Software installation                         | GRUB installation                             | GRUB installation location                | Finish installation                       |
+| ----------------------------------------- | --------------------------------------------- | --------------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![](/img/Virtualbox_vm_install_29.png)    | ![](/img/Virtualbox_vm_install_30.png)        | ![](/img/Virtualbox_vm_install_31.png)        | ![](/img/Virtualbox_vm_install_32.png)    | ![](/img/Virtualbox_vm_install_33.png)    | 
+
+- Once the VM reboots, select the default choice in GRUB (or just wait) and you can log in to you're new VM
+
+| Login screen                          | New VM desktop                          |
+| ------------------------------------- | --------------------------------------- |
+| ![](/img/Virtualbox_vm_install_34.png) | ![](/img/Virtualbox_vm_install_35.png) | 
 
 ### d
 
