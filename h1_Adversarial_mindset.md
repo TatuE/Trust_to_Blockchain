@@ -68,6 +68,48 @@ As far as the name goes, I'm pleased with the result. The episode can be found a
 
 #### Episode summary
 
+The host, Jack Rhysider Interviews two former NSA agents, Marcus J. Carey and Jeff Man.
+
+##### Marcus J. Carey
+
+- Found interest in programming in a young age (elementary school)
+- Enlisted in the Navy as was trained in cryptography.
+- While in the navy learned about signals intelligence, cryptographic systems, secure communication protocols, network hardware, programming and security.
+- Was considered an asset of the NSA, even though he was a part of the navy. Received extensive provided by the DoD (department of defence).
+- Worked in the NOC (Network Operation Center) and helped in setting up a NSA:s SOC (Security Operation Center).
+- After leaving the navy, started working in the Department of Defense Cyber Crime Center (CSC), which does forensic investigation for the DoD.
+- While at CSC, trained federal officers in cyber security and build a cyber security range to help with this.
+    - The cyber security range consisted of physical equipment (servers, networking hardware) and was a complete mock-up of a corporate network.
+    - Made it possible to test and train new threats securely and physically interact with the devices. 
+    - 
+- Marcus started his own company, Threatcare, which creates threat scenarios and runs exercises in cyber ranges and tabletop format. The company was bought by ReliaQuest, which is marcus's current employer.
+- Started writing books on cyber security, named Tribe of Hackers and was published three so far in teh series. Has he's own podcast : [Tribe of Hackers Podcast](https://tohpodcast.buzzsprout.com/)
+    - Also has written children’s book about security.
+- He's son also works in cyber security, as a software engineer for Rapid7, the company that owns [Metasploit](https://www.metasploit.com/)
+
+Marcus noted that the NSA is and has been committed to their primary objective, protecting the US communications and assets (which include domestic private companies operating abroad), even though it may not always seem like that. 
+The NSA provides public information regarding defensive measures and best practices but the offensive measures and reconnaissance methods are kept private. He mentioned Bin Ladens satellite phone tracking and the unintentional leaking of this information as an example.
+
+##### Jeff Man
+
+- Jeff considers on having the hacker mentality since a young age.
+    - By a hacker mentality he means a person who has the capability for critical thinking, has curiosity and is eager to learn more in a faster pace than the general public.
+- Started working in the NSA in 1986 and ended up in information security (InfoSec) and was trained as a cryptographer.
+- Note that in those days at the NSA, cryptographic decryption was done primarily manually. 
+- Started to study the possibility to use computers for encryption and decryption.
+    - At that time, cryptographic systems were based on hardware, not software.
+    - States tha in a way he hacker the NSA, by doing something in a NSA styled corporate environment should have  been impossible. 
+- Began to suspect weaknesses in the one-time-pad based cryptographic system.
+    - People using the the pad more than one time and thus severely weakening it's security. In essence, incorrectly using a tested and proven cryptographic method.
+    - The notion being that if he "enemy" has been caught doing this, are we also doing it?
+- Was part of the System and Network Attack Center (SNAC), that was formed in 1995.
+- Was a part of, what is by some considered the first red team. They used the name "The Pit" for they're office.
+    - The team focused more on offensive network security, learning from hackers and studying and generating exploits.
+        - In those days, zero-day exploits were not really a concept, they relied on operation system (UNIX in most cases) weaknesses that they had found to achieve privilege escalation. 
+- The Pit did internal penetration testing in NSA, looking for weaknesses in security.
+- What was learned by Jeff Mann and the team working in the Pit, has been used in governmental security testing. Most notably operation Eligible Receiver, which was intended to test the security of the US defense forces network.
+
+
 ### ATT&CK Enterprise Matrix
 
 The documents summarized can be read at the Mitre Corporation website: [Mitre ATT&CK FAQ](https://attack.mitre.org/resources/faq/), [Mitre ATT&CK Enterprise Matrix](https://attack.mitre.org/matrices/enterprise/)
@@ -126,6 +168,9 @@ There is also a third group that would benefit from these models, maybe a bit in
 
 I decided to search Krebs on security for an incident to investigate and I found an interesting case involving Github users. 
 The incident report can be read at the Krebs on security website: [This Windows PowerShell Phish Has Scary Potential](https://krebsonsecurity.com/2024/09/this-windows-powershell-phish-has-scary-potential/)
+
+#### Incident review
+
 
 ### c
 
