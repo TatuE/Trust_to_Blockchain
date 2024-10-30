@@ -123,6 +123,9 @@ The NSA provides public information regarding defensive measures and best practi
 - The Pit did internal penetration testing in NSA, looking for weaknesses in security.
 - What was learned by Jeff Mann and the team working in the Pit, has been used in governmental security testing. Most notably operation Eligible Receiver, which was intended to test the security of the US defense forces network.
 
+##### Summary
+
+I liked this episode, it maybe is bit more personal than the other episodes but like how it tels security history through personal experiences.
 
 ### ATT&CK Enterprise Matrix
 
