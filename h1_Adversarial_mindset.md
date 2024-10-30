@@ -171,6 +171,25 @@ The incident report can be read at the Krebs on security website: [This Windows 
 
 #### Incident review
 
+The incident was reported on having affected GitHub users at his stage.
+GitHub users have received phishing emails alerting them of security vulnerabilities in they're repositories. To fix this, the email provides a link (not pasted in this report) that takes the user to a webpage that asks them to verify that they are human (CAPTCHA). Normally you select pictures containing certain elements (trains for instance) or asks you to identify a picture but this one asks you to do three steps once you click the "I'm not a robot" button to verify that you indeed are a human.
+
+*Note: This only works in Windows operating systems*
+
+1. Press windows key + R (open Windows “Run” prompt)
+2. Press CTRL + v (Paste something to the "Run" prompt)
+3. Press enter (Executes what is pasted)
+
+Once you click the "I'm not a robot" button at the website, it copies malicious code (powershell) to target systems clipboard. It is then pasted to the "Run" prompt and executed, downloading and executing a file (l6e.exe), that downloads the Lumma Stealer malware that is designed to steal credentials from the infected PC and once acquired, sends them to a C2 server using HTTP Post requests. This malware has been confirmed by Virustotal.com by their analyzes. 
+
+Now, as the Krebs report states, GitHub users are most likely more vigilant and aware than the average PC user and changes are that not that many fell to this trap, but what if this was less targeted and affected regular PC users? The likelihood of success would most likely increase drastically.
+
+The incident report does not describe how target selection was made for this, but I would assume that the emails have been compromised with the association to GitHub, manual reconnaissance and target selection seems to be too far fetched in this case.
+
+[Malpedia](https://malpedia.caad.fkie.fraunhofer.de/details/win.lumma) states that Lumma Stealer is developed by a threat actor Shamel (also using the alias Lumma) and is available through a Malware-as-a-Service (MaaS) model. Origin most likely from Russia (Made available on Russian speaking forums), but at this stage I cannot find confirmation on this. It seems that the primary target of this is cryptocurrency wallets and two-factor authentication (2FA) browser extensions, which would mean that the end goal is monetary gain. This could be done by extorsion, blackmail, by the theft of cryptocurrency assets or by selling the hijacked credentials.
+
+Honestly, while the user can protect themselves from this by being careful, this is in an way quite elegant. CAPTCHA checks are so common place now days that this could be (and most likely is) executed accidentally if the user is less tech savvy. 
+The impact from this malware could be quite severe, for businesses and private people alike. I would imagine that this is going to get a bit more refined and be less targeted. 
 
 ### c
 
