@@ -77,7 +77,7 @@ The documents summarized can be read at the Mitre Corporation website: [Mitre AT
     - ATT&CK for Enterprise, focuses on enterprise IT-networks and cloud applications.  
     - ATT&CK for Mobile, focuses on mobile devices.
 - Consists of techniques for multiple systems and platforms, these include Windows, Linux, macOS, Android and iOS to name a few.
-- Focuses on tactics, techniques, and procedures (TTP:s) used by APT:s (Advanced Persistent Threat). [APT explained in the cyber Kill chain]().
+- Focuses on tactics, techniques, and procedures (TTP:s) used by APT:s (Advanced Persistent Threat). [APT explained in the cyber Kill chain](h1_Adversarial_mindset.md#hutchins-et-al-2011-intelligence-driven-computer-network-defense-informed-by-analysis-of-adversary-campaigns-and-intrusion-kill-chains).
     - Tactics
         - Represents the "why" or more precisely the goal of the technique used by the threat actor.
         - A tactic could be have the goal of: 
