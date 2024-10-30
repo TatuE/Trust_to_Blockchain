@@ -10,17 +10,31 @@
 >- Darknet Diaries. Pick one episode. (RSS feed)
 >- MITRE ATT&CK FAQ explains the ATT&CK Enterprise Matrix. Explain "tactic", "technique" and "procedure" in context of ATT&CK, and give an example of each. The enterprise matrix is big, you can just glimpse/browse it to see what's available instead of reading hundreds of pages.
 
+[Answer to x](h1_Adversarial_mindset.md#x)
+
 >a) How would you compare Cyber Kill Chain and ATT&CK Enterprise matrix? Who do you think could benefit from these models?
+
+[Answer to a](h1_Adversarial_mindset.md#a)
 
 >b) Pick a security incident and learn about it. Write briefly about it. Point out the concepts of threat actor, exploit, vulnerability and (business) impact. (You can find writeups about security incidents from Darknet Diaries and Krebs)
 
+[Answer to b](h1_Adversarial_mindset.md#b)
+
 >c) Install Debian on Virtualbox. Report your work, including the environment (including host OS, the real physical computer used), the steps you took and their results.
+
+[Answer to c](h1_Adversarial_mindset.md#c)
 
 >d) Voluntary bonus: Use either (Hutchins et al 2011) cyber kill chain or MITRE ATT&CK framework for analyzing a security incident. You can pick any incident you want (even the one you used earlier in this homework), but try to pick a source that gives you enough technical and business detail to do some analysis. (If you're in a hurry, cyber kill chain is much simpler. If you're technically skillful, you might find ATT&CK interesting)
 
+[Answer to d](h1_Adversarial_mindset.md#d)
+
 >e) Voluntary bonus: What do you consider the fundamentals of security? What are the theoretical foundations you would teach on the first day?
 
+[Answer to e](h1_Adversarial_mindset.md#e)
+
 >f) Voluntary bonus: Do you think anything is missing from these models, Cyber Kill Chain or MITRE ATT&CK?
+
+[Answer to f](h1_Adversarial_mindset.md#f)
 
 ### Tips:
 >- Some bullets for each article is enough. You don't need to have all content of the long articles in your summary.
@@ -203,9 +217,7 @@ It has been a few years since I last used Virtualbox, I have had little need to 
     - Memory: 32 GB DDR5 6000MHz
     - Graphics card: AMD RX 7900XTX
     - Storage: 1TB Western digital black SN850X (m.2, nvme)
-
-- Operating system: EndeavourOS (Arch linux)
-    - Kernel version: 6.11.5-arch1-1
+theoretical foundations
     - Desktop: KDE plasma 6 (Wayland)
     - Package manager: pacman
 
@@ -218,7 +230,7 @@ Update the system. Review upgrades if there is any and aprove if deemed acceptab
 
 Reboot system if required.
 
-Install Virtualbox and the required dependencies if there is any. Note that the Arch linux offers three (3) different host module packages, consult the Arch wiki page for the right one for you. In my case it is "virtualbox-host-modules-arch", since I only use the LTS kernel as a backup option.
+Install Virtualbox and the required dependencies if there istheoretical foundations any. Note that the Arch linux offers three (3) different host module packages, consult the Arch wiki page for the right one for you. In my case it is "virtualbox-host-modules-arch", since I only use the LTS kernel as a backup option.
 - *sudo pacman -S virtualbox*
 
 Reboot system or manually load the Virtualbox kernel module.
@@ -338,4 +350,15 @@ Let's select the graphical installation.
 
 ### e
 
+I will approach this question in a more general, non-technical fashion. Meaning that I will try to answer this question if it was asked by a "regular", non IT person.
+In my opinion, the fundamentals of security can be stated in two words, Trust and Consideration.
+
+The question of trust can be put into many situations, when the person should ask the question "Can I trust this"? "Is this email valid and trustworthy?", "Can I trust this new computer program", "Is this website safe?".
+After we have formed some level of trust, we can start considering our next action and form the question, "Should I do this?". "Should I click on this link from an email?", "Should I install this computer program", "Should I allow remote access to my computer by the person on the telephone?".
+I'm not trying to over simplify things, but usually the weakest link in security is people and it should be prudent to acknowledge this and not be offended by it
+
 ### f
+
+I would not say that anything is missing from these, since in my opinion they answer their given purpose, but I would like to make an addition to the ATT&CK Enterprise Matrix.
+The ATT&CK Enterprise Matrix documents tactics, techniques and procedures well and gives advice on detecting and mitigating these, but what I would like to is links to more technical information regarding techniques and sub-techniques. By technical information I mean practical examples and more detailed exploit descriptions.
+I know that this most likely is not what the Enterprise Matrix is intended to provide and there is a danger that i would become bloated.
