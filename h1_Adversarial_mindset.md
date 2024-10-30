@@ -67,7 +67,7 @@ Intrusion Kill Chains](https://lockheedmartin.com/content/dam/lockheed-martin/rm
     6. Command and Control (C2)
     7. Actions on Objectives
     - If an intrusion is prevented within a kill chain phase, the attacker cannot continue to the next phase.
-- The Intrusion Kill Chain drives to be more proactive in mitigating intrusions by utilizing Intelligence-driven computer network defense (intelligence-drive CND) analyzing the compromised phase (if detected) of the attack but more importantly the previous phases within the the kill chain.
+- The Intrusion Kill Chain drives to be more proactive in mitigating intrusions by utilizing Intelligence-driven computer network defense (intelligence-driven CND) analyzing the compromised phase (if detected) of the attack but more importantly the previous phases within the the kill chain.
     - Analyzing and determining indicators for the attack.
         - Indicators can be atomic (indivisible information, like an IP-address), computed (collected data from the intrusion, like hash values) and behavioral (collection of atomic and computed values which form a logical structure).
     - Applying a mitigation for the affected phase and possibly the phases before and after, if if the indicators analyzed enable this.
