@@ -56,7 +56,7 @@ Intrusion Kill Chains](https://lockheedmartin.com/content/dam/lockheed-martin/rm
 ### Darknet Diaries, episode 83: NSA Cryptologist
 
 I chose this episode randomly, since the last episode is numbered at 150, I would assume the first is 1. The RANDOM bash function decided for me (*echo $((1 + $RANDOM % 150))*). R
-As far as the name goes, I'm pleased with the result. The episode can be found at the Darknet Diaries website : [EP 83: NSA Cryptologists](https://darknetdiaries.com/episode/83/) 
+As far as the name goes, I'm pleased with the result. The episode can be found at the Darknet Diaries website : [EP 83: NSA Cryptologist](https://darknetdiaries.com/episode/83/) 
 
 #### Episode summary
 
@@ -67,7 +67,7 @@ The host, Jack Rhysider Interviews two former NSA agents, Marcus J. Carey and Je
 - Found interest in programming in a young age (elementary school)
 - Enlisted in the Navy as was trained in cryptography.
 - While in the navy learned about signals intelligence, cryptographic systems, secure communication protocols, network hardware, programming and security.
-- Was considered an asset of the NSA, even though he was a part of the navy. Received extensive provided by the DoD (department of defence).
+- Was considered an asset of the NSA, even though he was a part of the navy. Received extensive provided by the DoD (department of defense).
 - Worked in the NOC (Network Operation Center) and helped in setting up a NSA:s SOC (Security Operation Center).
 - After leaving the navy, started working in the Department of Defense Cyber Crime Center (CSC), which does forensic investigation for the DoD.
 - While at CSC, trained federal officers in cyber security and build a cyber security range to help with this.
@@ -150,7 +150,7 @@ The documents summarized can be read at the Mitre Corporation website: [Mitre AT
 The Cyber Kill Chain and ATT&CK Enterprise Matrix serve different purposes and in my view aren't comparable, even though they can complement each other and work side by side.
 The Cyber Kill Chain provides a model for analyzing, identifying and mitigating intrusions and developing a more robust approach on cyber security. 
 The ATT&CK Enterprise Matrix on the other hand, consists of documented incidents and guidelines on how mitigate them.
-These two can coexists, ATT&CK Enterprise Matrix providing knowledge of tactics and techniques used to battle the APT:s in different phases of the Cyber Kill Chain, while the new aquired knowledge of incidents from the Cyber Kill Chain can be added to the ATT&CK Enterprise Matrix.
+These two can coexists, ATT&CK Enterprise Matrix providing knowledge of tactics and techniques used to battle the APT:s in different phases of the Cyber Kill Chain, while the new acquired knowledge of incidents from the Cyber Kill Chain can be added to the ATT&CK Enterprise Matrix.
 
 
 >Who do you think could benefit from these models?
@@ -197,14 +197,13 @@ The impact from this malware could be quite severe, for businesses and private p
 ### Foreword
 It has been a few years since I last used Virtualbox, I have had little need to run full virtualization, since containers (Docker for Linux, Jails for BSD) fulfill my current needs. Last time I used a full virtualization platform  was most likely virt-manager (libvirt), since I managed the virtual machines using cockpit, although backup automation was done using virsh on the command line.
 
-### System enviroment
+### System environment
 - Computer
     - CPU: AMD 7700 (Clocked @ 5.45 GHz)
     - Motherboard: ASUS B650M-plus-wifi
     - Memory: 32 GB DDR5 6000MHz
     - Graphics card: AMD RX 7900XTX
     - Storage: 1TB Western digital black SN850X (m.2, nvme)
-theoretical foundations
     - Desktop: KDE plasma 6 (Wayland)
     - Package manager: pacman
 
@@ -212,12 +211,12 @@ theoretical foundations
 
 I usually review the Arch linux wiki for information, just in case. [Virtualbox Arch wiki page](https://wiki.archlinux.org/title/VirtualBox).
 
-Update the system. Review upgrades if there is any and aprove if deemed acceptable (This step is not mentioned again, but it's always a good practice to even glance what you are about to update)
+Update the system. Review upgrades if there is any and approve if deemed acceptable (This step is not mentioned again, but it's always a good practice to even glance what you are about to update)
 - *sudo pacman -Syu*
 
 Reboot system if required.
 
-Install Virtualbox and the required dependencies if there istheoretical foundations any. Note that the Arch linux offers three (3) different host module packages, consult the Arch wiki page for the right one for you. In my case it is "virtualbox-host-modules-arch", since I only use the LTS kernel as a backup option.
+Install Virtualbox and the required dependencies if there is any. Note that the Arch linux offers three (3) different host module packages, consult the Arch wiki page for the right one for you. In my case it is "virtualbox-host-modules-arch", since I only use the LTS kernel as a backup option.
 - *sudo pacman -S virtualbox*
 
 Reboot system or manually load the Virtualbox kernel module.
@@ -276,7 +275,7 @@ Let's select the graphical installation.
 - Select keyboard layout. NOTE! US usually uses an ANSI keyboard layout, which is ok but I prefer ISO (used in Finland for example).
 - Select hostname for the new VM. "vbox" is OK in this case, but you should select a unique hostname for each computer for the sake of convenience.
 
-| Language                              | Location                              | Kayboard layout                               | Hostname                              |
+| Language                              | Location                              | Keyboard layout                               | Hostname                              |
 | ------------------------------------- | -----------------------------------   | --------------------------------------------- | ------------------------------------- |
 | ![](/img/Virtualbox_vm_install_8.png) | ![](/img/Virtualbox_vm_install_9.png) | ![](/img/Virtualbox_vm_install_10.png)        | ![](/img/Virtualbox_vm_install_11.png)|
 
