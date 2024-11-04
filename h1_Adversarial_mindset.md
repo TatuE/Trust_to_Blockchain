@@ -13,6 +13,7 @@ Full assignment can be viewed at the courses website : [H1 Adversarial mindset](
 
 Links to assignment answers.
 
+- [Answer to assignment x](h1_Adversarial_mindset.md#x)
 - [Answer to assignment a](h1_Adversarial_mindset.md#a)
 - [Answer to assignment b](h1_Adversarial_mindset.md#b)
 - [Answer to assignment c](h1_Adversarial_mindset.md#c)
