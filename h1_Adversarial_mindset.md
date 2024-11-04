@@ -5,7 +5,7 @@
 
 ## Assignment
 
-Full assignment can be viewed at the courses website : ["H1 Adversarial mindset"](https://terokarvinen.com/trust-to-blockchain/#h1-adversarial-mindset)
+Full assignment can be viewed at the courses website : [H1 Adversarial mindset](https://terokarvinen.com/trust-to-blockchain/#h1-adversarial-mindset)
 
 ## Assignment answers
 
