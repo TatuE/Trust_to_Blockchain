@@ -1,56 +1,33 @@
-# h1 Adversarial mindset
+# H1 Adversarial mindset
 
 >*You will read the famous cyber kill chain paper. And start your very own hacking lab by installing Linux virtual machine.*
 >*You can only start this homework after accepting course rules in Moodle.*
 
 ## Assignment
 
+Full assignment can be viewed at the courses website : ["H1 Adversarial mindset"](https://terokarvinen.com/trust-to-blockchain/#h1-adversarial-mindset)
+
+## Assignment answers
+
+### Assignment links
+
+Links to assignment answers.
+
+- [Answer to assignment a](h1_Adversarial_mindset.md#a)
+- [Answer to assignment b](h1_Adversarial_mindset.md#b)
+- [Answer to assignment c](h1_Adversarial_mindset.md#c)
+- [Answer to assignment d](h1_Adversarial_mindset.md#d)
+- [Answer to assignment e](h1_Adversarial_mindset.md#e)
+- [Answer to assignment f](h1_Adversarial_mindset.md#f)
+
+## x
+
 >x) Read and summarize. Some bullets is enough for a summary.
 >- Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains
 >- Darknet Diaries. Pick one episode. (RSS feed)
 >- MITRE ATT&CK FAQ explains the ATT&CK Enterprise Matrix. Explain "tactic", "technique" and "procedure" in context of ATT&CK, and give an example of each. The enterprise matrix is big, you can just glimpse/browse it to see what's available instead of reading hundreds of pages.
 
-[Answer to x](h1_Adversarial_mindset.md#x)
-
->a) How would you compare Cyber Kill Chain and ATT&CK Enterprise matrix? Who do you think could benefit from these models?
-
-[Answer to a](h1_Adversarial_mindset.md#a)
-
->b) Pick a security incident and learn about it. Write briefly about it. Point out the concepts of threat actor, exploit, vulnerability and (business) impact. (You can find writeups about security incidents from Darknet Diaries and Krebs)
-
-[Answer to b](h1_Adversarial_mindset.md#b)
-
->c) Install Debian on Virtualbox. Report your work, including the environment (including host OS, the real physical computer used), the steps you took and their results.
-
-[Answer to c](h1_Adversarial_mindset.md#c)
-
->d) Voluntary bonus: Use either (Hutchins et al 2011) cyber kill chain or MITRE ATT&CK framework for analyzing a security incident. You can pick any incident you want (even the one you used earlier in this homework), but try to pick a source that gives you enough technical and business detail to do some analysis. (If you're in a hurry, cyber kill chain is much simpler. If you're technically skillful, you might find ATT&CK interesting)
-
-[Answer to d](h1_Adversarial_mindset.md#d)
-
->e) Voluntary bonus: What do you consider the fundamentals of security? What are the theoretical foundations you would teach on the first day?
-
-[Answer to e](h1_Adversarial_mindset.md#e)
-
->f) Voluntary bonus: Do you think anything is missing from these models, Cyber Kill Chain or MITRE ATT&CK?
-
-[Answer to f](h1_Adversarial_mindset.md#f)
-
-### Tips:
->- Some bullets for each article is enough. You don't need to have all content of the long articles in your summary.
->- For the summary, add your own question, idea or comment
->- Hutchins et. al. is the cyber kill chain paper.
->- Darknet diaries: you'll probably have a different episode from everyone else, as long as you don't take the latest episode.
->- To listen to podcasts on Android, you can use AntennaPod from F-Droid or Google Play
->- Refer to each source you've used: the course, the task given, the papers, the podcasts - all sources you've used. All sources must be mentioned in every document, page or blog using them. It's enough to just name and link them, you don't need to write another list in the end. In fact, it's important to know which information comes from which source.
->- My article Install Debian on Virtualbox explains it pretty well.
->- Got stuck with VirtualBox or Linux? Don't worry, computers are like that. Write a detailed report (in your homework) with screenshots. Explain what approaches you took and what happened. List where you found advice or articles. Explain your ideas why it would not work. You'll get help and advise in the class (and that's not all - you'll also get Linux on your virtual machine).
-
-## Assignment answers
-
-### x
-
-#### Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains
+### Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains
 
 The document summarized can be read at the Lockheed Martin website : [Intelligence-Driven Computer Network Defense
 Informed by Analysis of Adversary Campaigns and
@@ -165,7 +142,9 @@ The documents summarized can be read at the Mitre Corporation website: [Mitre AT
     - In the previous examples, precise ATT&CK Enterprise Matrix tactics, techniques and sub-techniques are within round brackets written in *italic*.   
 - ATT&CK Enterprise Matrix consists of tactics in a logical and chronological order a threat actor would proceed in, from reconnaissance to impact.
 
-### a
+## a
+
+>a) How would you compare Cyber Kill Chain and ATT&CK Enterprise matrix? Who do you think could benefit from these models?
 
 The Cyber Kill Chain and ATT&CK Enterprise Matrix serve different purposes and in my view aren't comparable, even though they can complement each other and work side by side.
 The Cyber Kill Chain provides a model for analyzing, identifying and mitigating intrusions and developing a more robust approach on cyber security. 
@@ -181,12 +160,14 @@ I see the ATT&CK Enterprise Matrix benefiting system and network administrators,
 There is also the notion that both parties would benefit from both models, since I see these two models working side by side strengthening each other as stated before.
 There is also a third group that would benefit from these models, maybe a bit indirectly with out dwelling too much on the technical side and these are the decision makers, CEO:S, COO:s and CTO:s. Reviewing these should raise the question "are we doing enough", "should we do more", "Are we already doing something".
 
-### b
+## b
+
+>b) Pick a security incident and learn about it. Write briefly about it. Point out the concepts of threat actor, exploit, vulnerability and (business) impact. (You can find writeups about security incidents from Darknet Diaries and Krebs)
 
 I decided to search Krebs on security for an incident to investigate and I found an interesting case involving Github users. 
 The incident report can be read at the Krebs on security website: [This Windows PowerShell Phish Has Scary Potential](https://krebsonsecurity.com/2024/09/this-windows-powershell-phish-has-scary-potential/)
 
-#### Incident review
+### Incident review
 
 The incident was reported on having affected GitHub users at his stage.
 GitHub users have received phishing emails alerting them of security vulnerabilities in they're repositories. To fix this, the email provides a link (not pasted in this report) that takes the user to a webpage that asks them to verify that they are human (CAPTCHA). Normally you select pictures containing certain elements (trains for instance) or asks you to identify a picture but this one asks you to do three steps once you click the "I'm not a robot" button to verify that you indeed are a human.
@@ -199,7 +180,7 @@ GitHub users have received phishing emails alerting them of security vulnerabili
 
 Once you click the "I'm not a robot" button at the website, it copies malicious code (powershell) to target systems clipboard. It is then pasted to the "Run" prompt and executed, downloading and executing a file (l6e.exe), that downloads the Lumma Stealer malware that is designed to steal credentials from the infected PC and once acquired, sends them to a C2 server using HTTP Post requests. This malware has been confirmed by Virustotal.com by their analyzes. 
 
-Now, as the Krebs report states, GitHub users are most likely more vigilant and aware than the average PC user and changes are that not that many fell to this trap, but what if this was less targeted and affected regular PC users? The likelihood of success would most likely increase drastically.
+Now, as the Krebs report states, GitHub users are most likely more vigilant and aware than the average PC user and chances are, that not that many fell to this trap, but what if this was less targeted and affected regular PC users? The likelihood of success would most likely increase drastically.
 
 The incident report does not describe how target selection was made for this, but I would assume that the emails have been compromised with the association to GitHub (compromised emailing list perhaps), manual reconnaissance and target selection seems to be too far fetched in this case.
 
@@ -208,12 +189,14 @@ The incident report does not describe how target selection was made for this, bu
 Honestly, while the user can protect themselves from this by being careful, this is in an way quite elegant. CAPTCHA checks are so common place now days that this could be (and most likely is) executed accidentally if the user is less tech savvy. 
 The impact from this malware could be quite severe, for businesses and private people alike. I would imagine that this is going to get a bit more refined and be less targeted. 
 
-### c
+## c
 
-#### Foreword
+>c) Install Debian on Virtualbox. Report your work, including the environment (including host OS, the real physical computer used), the steps you took and their results.
+
+### Foreword
 It has been a few years since I last used Virtualbox, I have had little need to run full virtualization, since containers (Docker for Linux, Jails for BSD) fulfill my current needs. Last time I used a full virtualization platform  was most likely virt-manager (libvirt), since I managed the virtual machines using cockpit, although backup automation was done using virsh on the command line.
 
-#### System enviroment
+### System enviroment
 - Computer
     - CPU: AMD 7700 (Clocked @ 5.45 GHz)
     - Motherboard: ASUS B650M-plus-wifi
@@ -224,7 +207,7 @@ theoretical foundations
     - Desktop: KDE plasma 6 (Wayland)
     - Package manager: pacman
 
-#### Virtualbox Installation
+### Virtualbox Installation
 
 I usually review the Arch linux wiki for information, just in case. [Virtualbox Arch wiki page](https://wiki.archlinux.org/title/VirtualBox).
 
@@ -248,7 +231,7 @@ Start the regular Virtualbox GUI.
 
 ![Arch linux Virtualbox installation](/img/virtual_box_install.png)
 
-#### Virtual machine installation
+### Virtual machine installation
 
 Download the installation ISO image from the [Debian home page](https://www.debian.org/)
 Create a new virtual machine in Virtualbox.
@@ -284,7 +267,7 @@ Everything seems to be in order now.
 
 ![](/img/Virtualbox_vm_install_7.png)
 
-#### Debian Virtual machine installation
+### Debian Virtual machine installation
 
 Let's select the graphical installation.
 - Select installation language, English will do in our case.
@@ -349,7 +332,9 @@ Let's select the graphical installation.
 | ------------------------------------- | --------------------------------------- |
 | ![](/img/Virtualbox_vm_install_34.png) | ![](/img/Virtualbox_vm_install_35.png) | 
 
-### d
+## d
+
+>d) Voluntary bonus: Use either (Hutchins et al 2011) cyber kill chain or MITRE ATT&CK framework for analyzing a security incident. You can pick any incident you want (even the one you used earlier in this homework), but try to pick a source that gives you enough technical and business detail to do some analysis. (If you're in a hurry, cyber kill chain is much simpler. If you're technically skillful, you might find ATT&CK interesting)
 
 I will try and analyze the security incident described in [assignment b](h1_Adversarial_mindset.md#b) using the Mitre ATT&CK Enterprise Matrix.
 I will do this in a chronological order by the factors I can find.
@@ -394,7 +379,9 @@ I will do this in a chronological order by the factors I can find.
     - Procedure: The threat actor ransoms the locked user accounts the the targets.
 
 
-### e
+## e
+
+>e) Voluntary bonus: What do you consider the fundamentals of security? What are the theoretical foundations you would teach on the first day?
 
 I will approach this question in a more general, non-technical fashion. Meaning that I will try to answer this question if it was asked by a "regular", non IT person.
 In my opinion, the fundamentals of security can be stated in two words, Trust and Consideration.
@@ -403,7 +390,9 @@ The question of trust can be put into many situations, when the person should as
 After we have formed some level of trust, we can start considering our next action and form the question, "Should I do this?". "Should I click on this link from an email?", "Should I install this computer program", "Should I allow remote access to my computer by the person on the telephone?".
 I'm not trying to over simplify things, but usually the weakest link in security is people and it should be prudent to acknowledge this and not be offended by it
 
-### f
+## f
+
+>f) Voluntary bonus: Do you think anything is missing from these models, Cyber Kill Chain or MITRE ATT&CK?
 
 I would not say that anything is missing from these, since in my opinion they answer their given purpose, but I would like to make an addition to the ATT&CK Enterprise Matrix.
 The Mitre ATT&CK Enterprise Matrix documents tactics, techniques and procedures well and gives advice on detecting and mitigating these, but what I would like to is links to more technical information regarding techniques and sub-techniques. By technical information I mean practical examples and more detailed exploit descriptions.
