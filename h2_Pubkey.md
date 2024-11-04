@@ -25,15 +25,15 @@ Links to assignment answers.
 ## x
 
 >x) Read and summarize (with some bullet points)
-- € Schneier 2015: Applied Cryptography: Chapter 2 - Protocol Building Blocks, sections
-    - 2.5 Communications Using Public-Key Cryptography
-    - 2.6 Digital Signatures
-    - 2.7 Digital Signatures With Encryption
-    - 2.8 Random And Pseudo-Random-Sequence Generation
-- € Rosenbaum 2019: Grokking Bitcoin:
-    - Chapter 2. Cryptographic hash functions and digital signatures:
-        - Digital signatures (8 sections, from "Typical use of digital signatures" to "Private key security")
-- Karvinen 2023: PGP - Send Encrypted and Signed Message - gpg
+>- € Schneier 2015: Applied Cryptography: Chapter 2 - Protocol Building Blocks, sections
+>    - 2.5 Communications Using Public-Key Cryptography
+>    - 2.6 Digital Signatures
+>    - 2.7 Digital Signatures With Encryption
+>    - 2.8 Random And Pseudo-Random-Sequence Generation
+>- € Rosenbaum 2019: Grokking Bitcoin:
+>    - Chapter 2. Cryptographic hash functions and digital signatures:
+>        - Digital signatures (8 sections, from "Typical use of digital signatures" to "Private key security")
+>- Karvinen 2023: PGP - Send Encrypted and Signed Message - gpg
 
 ### Schneier 2015: Applied Cryptography: Chapter 2 - Protocol Building Blocks, sections 2.5 - 2.8
 
@@ -72,7 +72,7 @@ Links to assignment answers.
 ## h
 
 >h) Voluntary, challenging, requires coding: Cryptopals: Challenge Set 1:
-1. Convert hex to base64 (feel free to use a library for base64)
-2. Fixed XOR
-3. Single-byte XOR cipher
-4. Detect single-character XOR (This looks tough before you have solved 1-3)
+>1. Convert hex to base64 (feel free to use a library for base64)
+>2. Fixed XOR
+>3. Single-byte XOR cipher
+>4. Detect single-character XOR (This looks tough before you have solved 1-3)
