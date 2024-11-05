@@ -176,7 +176,7 @@ The message is written using Vi (not Emacs). Ok, it's Vim but you get the idea.
 
 ![](/img/GPG_example-5.png)
 
-Pinky will not sing the the message and encrypt it with the Brains public key. 
+Pinky will now sing the the message and encrypt it with the Brains public key. 
 
 ![](/img/GPG_example-6.png)
 
@@ -206,13 +206,51 @@ Pinky is delighted that tonights plans are the same as always.
 
 >d) Eve and Mallory. In many crypto stories, Eve is a passive eavesdropper, listening on the wire. Mallory maliciously modifies the messages. Explain how PGP protects against Mallory and Eve. Be specific what features, which use of keys and which flags in the command are related to this protection. (This subtasks does not require tests with a computer)
 
-
-
 ## f
 
 >f) Password management. Demonstrate use of a password manager. What kind of attacks take advantage of people not using password managers? (You can use any password manager, some examples include [pass](https://www.passwordstore.org/) and [KeePassXC](https://keepassxc.org/).)
 
-I have been using Pass since 2017 (at least), it started out as my primary password manager that I self hosted, but since last summer, it has become more of a super secret repository (server passwords, social security numbers) that is accessible only from my local network. For more daily passwords (like Haaga-Helia) I use Pass provided by Proton AG, since it's more easily accessible. I'm planning on hosting Vaultwarden (An alternative server implementation of the Bitwarden Client API, written in Rust) 
+I have been using Pass since 2017 (at least), it started out as my primary password manager that I self hosted, but since last summer, it has become more of a super secret repository (server passwords, social security numbers) that is accessible only from my local network. For more daily passwords (like Haaga-Helia) I use Pass provided by Proton AG, since it's more easily accessible. I'm planning on hosting [Vaultwarden](https://github.com/dani-garcia/vaultwarden) (An alternative server implementation of the Bitwarden Client API, written in Rust), since it makes managing groups and users more easy.
+
+For this part of the assignment I will install and setup Pass for the user with my own account, since I need to able to use a clipboard (X11 / Wayland needed). 
+
+Before we can start, we have to install pass. This part is done by the system administrator (me).
+
+- *sudo pacman -S pass xclip dmenu*
+    - pass : The password manager.
+    - xclip : Used to copy a password to the clipboard (I'm using KDE and it has had problems if xclip is missing). 
+    - demu : A nifty tool, when used together with pass makes using passwords even more convenient.
+        - **CORRECTION** Pass + dmenu + wayland is a bit broken. Use the dmenu-wayland-git and dmenu-wl-dmenu-dropin package from [AUR (Archlinux User Repository)](https://aur.archlinux.org/)
+
+
+I will generate a new key pair, that uses a password protection. **Note that you can use Pass without password protection, but that is generally not a good idea**.
+
+I will initialize the password store using my new key and generate a new key that uses 24 characters.
+The process is quite fast and by default, pass used the right combination of characters (small and large letters, numbers and "special" characters).
+To use the new password the, it can be copied to the clipboard by adding the "c" parameter. 
+
+![](/img/Pass_example-1.png)
+
+Once you try to open a password, the password for you're private key is asked.
+
+![](/img/Pass_example-2.png)
+
+OK, lets admit that using the terminal is not the most convenient way of using this. Luckily Pass comes packaged with the *passmenu* tool, that uses the dmenu tool. This can be added to a keyboard shortcut, show the you're passwords are just a fwe key presses away.
+
+![](/img/Pass_example-3.png)
+Note that the dmenu bar is in the top of the display.
+
+Note that with Pass, the username is usually the encrypted filename, to manage different services a folder structure is recommended. This is in a sense a weakness, since unless you restrict folder access (which you should), others might see you're username for a service.    
+
+Pass also supports git, which makes managing passwords in multiple devices possible. I have my current pass git repository on my home server and I have added a Pass application to my iPhone and tablet. 
+
+Using git with pass has two nice benefits :
+1. You're devices don't need network or an internet connection when you need to use you're passwords. Updating passwords of course needs this, but you just need to perform the *git pull* + *git push* command.
+2. You can use SSH with git and manage you're password repository securely.
+
+> What kind of attacks take advantage of people not using password managers?
+
+People who don't use password managers usually create weak passwords and/or use the same passwords or passwords with similar structures. There is also the possibility that they stick to default passwords offered to them (a router for instance). All these share the same danger regarding an attack, this is password enumeration and brute force attack. Attackers can use libraries containing "usual" passwords which is used in a brute force attack (trying out different username (if unknown) and passwords combinations in a rapid succession until a correct combination is found). Also if you're password is leaked from one service, there is likelihood that the same password could be used in another service. Since passwords managers in most cases offer the option to generate a username, people not using one are likely to use the same username (email address by default) in multiple services.
 
 ## g
 
