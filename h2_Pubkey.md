@@ -315,3 +315,5 @@ Done
 >2. Fixed XOR
 >3. Single-byte XOR cipher
 >4. Detect single-character XOR (This looks tough before you have solved 1-3)
+
+This is under works, not sure if can complete before assignment deadline, but we will see.
