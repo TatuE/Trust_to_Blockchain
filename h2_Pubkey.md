@@ -65,13 +65,10 @@ To make the digital signatures produced by using public-key algorithms in docume
     - Saving the signed hash as proof is also a way to save storage space, since its smaller that the original document. 
 
 Since the encrypted hash (in this case the timestamped digital signature) is related to a single person or organization, signatures by multiple parties can be applied to a single document.
-
 As mentioned before, since public-key cryptography relies on the assumption that the private key is kept secret, this provides a possible weak point with digital signatures. A signing member can afterwards state that their private key has been compromised and they in fact did not sign the document. This can be be remedied by verification, the signed messages are timestamped on reception and returned as a confirmation receipt to the sender.
 
-Using one-way hash functions also brings an additional benefit in digital signatures, it can proof that the signed document (or message) is unaltered. The recipient can produce a hash from the document using the same hash function and compare it to the decrypted hash from the sender. 
-
-Using encryption in sending the encrypted hash (digital signature) provides even more security and reassurance of the senders identity. In this scenario you would sign the hash with you're private key and encrypt a message containing said encrypted has with the recipients public key. 
-
+Using one-way hash functions also brings an additional benefit in digital signatures, it can proof that the signed document (or message) is unaltered. The recipient can produce a hash from the document using the same hash function and compare it to the decrypted hash from the sender.
+Using encryption in sending the encrypted hash (digital signature) provides even more security and reassurance of the senders identity. In this scenario you would sign the hash with you're private key and encrypt a message containing said encrypted has with the recipients public key.
 Public-key cryptography relies on trust and this is also a weak point in the system. How to know that a persons public key is in fact they're public key if it is made publicly available? One way is to use a Key Certification Authority or Key Distribution Center, who can help verify the authenticity of the said key.
 
 The document also details how random is randomly generated numbers, this is important since cryptographic keys are based on randomly generated numbers.
@@ -85,7 +82,20 @@ The document demonstrates in more details the usage of digital signatures mentio
 
 It points out that while hand written signatures are usually tied to the person writing the signature, digital signatures are tied to the private key that signs them.
 
+The documents raises important points regarding the use of public keys in digital signatures.
 
+- The public key is generated from the private key in a one-way derivation, so the private key cannot be deduced from the public key.
+- The digital signature is an encrypted hash from the message or document.
+    - By decrypting the the hash with the senders public key and generating the hash again, the recipient can make sure that the message or document sent by the sender (or at least using his/her private key) and is unaltered.
+- You are responsible for you're private key, since as mentioned before, the signature is attached to the private key, not necessarily the person (if the key is lost).
+- Both keys can encrypt and decrypt one another's message. It is to be noted that this works only one way, so for example messages encrypted with the public key can only be decrypted using the private key and vice versa. 
+    - It is to be noted that as mentioned before in this assignment, this is not universal and is depended on the public kay algorithm used (like RSA for example).
+- Importance of storing the private key securely. This can be done offline or online, in a plaint or encrypted form, the whole key in one place or split key multiple places 
+    - All of the above choices have their benefits and risks.
+        - Storing the key offline (for example on a private server in a local network or on a printed paper) is secure but is not that convenient to access than a key stored in an online location (a cloud service for example).
+        - Plaintext key is easier to use but is in plane text, so anyone can view it if they have the access. Encrypted key is safer but less convenient use.
+        - Splitting the key in multiple parts creates an extra layer of security, but is again less convenient to use.
+    - All in all you should decide on the level of security and access to be used.
 
 
 ### Karvinen 2023: PGP - Send Encrypted and Signed Message - gpg
@@ -141,6 +151,14 @@ The cipher suite determines what set of algorithms (RSA, AES, SHA for example) a
 
 - As with the previous assignment, this assignment is done in EndeavourOS (Arch linux).
 - For practical reasons, use SSH for client connection if doing this with multiple users in the same OS, at the same time. Pinetry (used by gnupg) fails otherwise and you cannot create keys
+
+
+### Sources
+
+This assignment uses two sources:
+
+- [Arch wiki GnuPg](https://wiki.archlinux.org/title/GnuPG#) page for general know how.
+- [Tero Karvinen PGP - Send Encrypted and Signed Message - gpg](https://terokarvinen.com/2023/pgp-encrypt-sign-verify/) for the general idea.
 
 ### The assignment
 
@@ -202,15 +220,47 @@ Pinky is delighted that tonights plans are the same as always.
 
 >c) Other tool. Encrypt a message using a tool other than PGP. Explain how different parties use different keys at different stages of operation. Evaluate the security of the tool you've chosen.
 
+Source: 
+- OpenSSL man page
+    - *man openssl*
+- [OpenSSL Arch wiki page](https://wiki.archlinux.org/title/OpenSSL)
+
+With this part of the assignment, it was a bit hard to decide on what tool to use.
+
+- OpenSSH could be a good example if SSH-keys are used, since it also consists of a public and private key. But the problem is that while the communication is secure,in general SSH is used for tunneling and the definition *Encrypt a message* is not fully satisfied.
+- Signal protocol could also be an option since it has end-to-end encryption and also uses public key cryptography, but since time is limited, I'm really not sure how to demonstrate this in a satisfactory fashion, even if there is a [github repo](https://github.com/signalapp/libsignal) available.
+
+To be specific, I would like to complete this assignment using a tool found in Linux that I simulate the same procedure than with [assignment c](h2_Pubkey.md#c). 
+The only thing I could think of is using openssl for this. I setup a private CA with my former employer and have some experience on using openssl on linux. Note that this actually pretty much goes along side [assignment a : TLS](h2_Pubkey.md#c), which also uses ssl keys. Note that the TLS/SSL are depended on X.509 standard (CA's and public key certificates), not web of trust that PGP relies on.
+
+So, for this part of the assignment, I will encrypt a message using openssl. Pinky will generate a ssl key pair and the Brain will send a message to Pinky using Pinky's public ssl key. 
+
+![](/img/Openssl_example-1.png)
+
+So what happens here? The process it pretty much as with the GPG example before. Messages are encrypted with the public key and decrypted using the private key. Note that unlike the previous GPG example, RSA cryptosystem is used.
+
+> Evaluate the security of the tool you've chosen.
+
+Openssl is secure but maybe not the best choice for encrypting messages in an OS level from user to user. SSL keys and certificates are pivotal in modern communication, since they help ensure that public and private networks are more secure.
+
+I'm not honestly sure did this answer satisfies the assignment but at least it was refreshing to use openssl on he command line again.
+
 ## d
 
 >d) Eve and Mallory. In many crypto stories, Eve is a passive eavesdropper, listening on the wire. Mallory maliciously modifies the messages. Explain how PGP protects against Mallory and Eve. Be specific what features, which use of keys and which flags in the command are related to this protection. (This subtasks does not require tests with a computer)
+
+The protection PGP offers several ways to protect against Eve and Mallory.
+
+Against Eve's eavesdropping PGP protects you by using hybrid ciphers (Hybrid cryptosystem mentioned in [assignment x](h2_Pubkey.md#x)). 
+The communication is encrypted by using a session key. This session key is encrypted using the the recipients public key, the recipient decrypts it with his/her private key and the communication commences using the symmetric session key. Eve can eavesdrop this if she has obtained the recipients private key but as stated multiple times in this assignment, every measure should be taken to keep this a secret. 
+
+If Mallory maliciously modifies a messages, this can be detected using the digital signature included in the message. The digital signature is an encrypted hash and the hash is produced from the message or document. The recipient can deduce if the message has been altered by decrypting the hash using the senders public key and generating a new hash from of the message, if these two are identical, the message is unaltered. This of course again assumes that Mallory has not obtained the senders secret key or fooled the recipient by substituting the senders public key with her own. To protect against this, the recipient can verify and sign the public key by verifying the public keys fingerprint with the sender.
 
 ## f
 
 >f) Password management. Demonstrate use of a password manager. What kind of attacks take advantage of people not using password managers? (You can use any password manager, some examples include [pass](https://www.passwordstore.org/) and [KeePassXC](https://keepassxc.org/).)
 
-I have been using Pass since 2017 (at least), it started out as my primary password manager that I self hosted, but since last summer, it has become more of a super secret repository (server passwords, social security numbers) that is accessible only from my local network. For more daily passwords (like Haaga-Helia) I use Pass provided by Proton AG, since it's more easily accessible. I'm planning on hosting [Vaultwarden](https://github.com/dani-garcia/vaultwarden) (An alternative server implementation of the Bitwarden Client API, written in Rust), since it makes managing groups and users more easy.
+I have been using [Pass](https://www.passwordstore.org/) since 2017 (at least), it started out as my primary password manager that I self hosted, but since last summer, it has become more of a super secret repository (server passwords, social security numbers) that is accessible only from my local network. For more daily passwords (like Haaga-Helia) I use Pass provided by Proton AG, since it's more easily accessible. I'm planning on hosting [Vaultwarden](https://github.com/dani-garcia/vaultwarden) (An alternative server implementation of the Bitwarden Client API, written in Rust), since it makes managing groups and users more easy.
 
 For this part of the assignment I will install and setup Pass for the user with my own account, since I need to able to use a clipboard (X11 / Wayland needed). 
 
@@ -240,7 +290,7 @@ OK, lets admit that using the terminal is not the most convenient way of using t
 ![](/img/Pass_example-3.png)
 Note that the dmenu bar is in the top of the display.
 
-Note that with Pass, the username is usually the encrypted filename, to manage different services a folder structure is recommended. This is in a sense a weakness, since unless you restrict folder access (which you should), others might see you're username for a service.    
+Note that with Pass, the username is usually the encrypted filename, to manage different services a folder structure is recommended. This is in a sense a weakness, since unless you restrict folder access (which you should), others might see you're username for a service. This is why I did not demonstrate this with my own, active password repository. 
 
 Pass also supports git, which makes managing passwords in multiple devices possible. I have my current pass git repository on my home server and I have added a Pass application to my iPhone and tablet. 
 
