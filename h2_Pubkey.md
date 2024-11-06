@@ -231,7 +231,7 @@ With this part of the assignment, it was a bit hard to decide on what tool to us
 - Signal protocol could also be an option since it has end-to-end encryption and also uses public key cryptography, but since time is limited, I'm really not sure how to demonstrate this in a satisfactory fashion, even if there is a [github repo](https://github.com/signalapp/libsignal) available.
 
 To be specific, I would like to complete this assignment using a tool found in Linux that I simulate the same procedure than with [assignment c](h2_Pubkey.md#c). 
-The only thing I could think of is using openssl for this. I setup a private CA with my former employer and have some experience on using openssl on linux. Note that this actually pretty much goes along side [assignment a : TLS](h2_Pubkey.md#c), which also uses ssl keys. Note that the TLS/SSL are depended on X.509 standard (CA's and public key certificates), not web of trust that PGP relies on.
+The only thing I could think of is using openssl for this. I setup a private CA with my former employer and have some experience on using openssl on linux. Note that this actually pretty much goes along side [assignment a : TLS](h2_Pubkey.md#c), which also uses ssl keys. Note that the TLS/SSL are depended on X.509 standard (CA's and public key certificates), not web of trust that openPGP is often viewed to rely on, but if I have understood correctly, the current version of openPGP also supports using CA's.
 
 So, for this part of the assignment, I will encrypt a message using openssl. Pinky will generate a ssl key pair and the Brain will send a message to Pinky using Pinky's public ssl key. 
 
