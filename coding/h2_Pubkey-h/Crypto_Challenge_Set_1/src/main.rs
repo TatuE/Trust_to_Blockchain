@@ -1,4 +1,4 @@
-use std::{error::Error, io};
+use std::io;
 
 mod utils;
 
@@ -10,15 +10,16 @@ const PRINT_L: u32 = 50;
 const NUM_OPTIONS: u32 = 4;
 
 fn main() {
+    utils::clear_c();
     utils::print_new_lines(2);
     utils::print_symbol(PRINT_L,'*');
     utils::print_with_spaces(PRINT_L, "Cryptopals: Challenge Set 1");
     utils::print_symbol(PRINT_L,'*');
     utils::print_new_lines(2);
+    print_program_option(false);
 
     loop {
         let mut option_selected_s  = String::new();
-        print_program_option();
 
         println!("Please input your choice ( Option number ) :");
 
@@ -48,11 +49,16 @@ fn main() {
             utils::print_new_lines(2);
             println!("You have select : {option_selected_n}, which is not an option in this program. Please select again!");
         }
+        print_program_option(false);
     }
 }
 
-fn print_program_option(){
-    utils::print_new_lines(1);
+fn print_program_option(clear_screen_b:bool){
+    if clear_screen_b{
+        utils::clear_c();    
+    }
+
+    utils::print_new_lines(2);
     utils::print_with_spaces(PRINT_L, "Which challenge would you like to run?");
     utils::print_new_lines(1);
     println!("Option 1: Challenge 1 = Convert hex to base64.");
@@ -65,7 +71,7 @@ fn print_program_option(){
 
 fn challenge_1(){
     let mut challenge_hex_s = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d";
-
+    utils::clear_c();
     utils::print_new_lines(2);
     utils::print_with_spaces(PRINT_L, "Challenge 1 : Convert hex to base64.");
     utils::print_symbol(PRINT_L,'*');
@@ -79,6 +85,7 @@ fn challenge_1(){
 }
 
 fn challenge_2(){
+    utils::clear_c();
     utils::print_new_lines(2);
     utils::print_with_spaces(PRINT_L, "Challenge 2 = Fixed XOR.");
     utils::print_symbol(PRINT_L,'*');
@@ -86,6 +93,7 @@ fn challenge_2(){
 }
 
 fn challenge_3(){
+    utils::clear_c();
     utils::print_new_lines(2);
     utils::print_with_spaces(PRINT_L, "Challenge 3 = Single-byte XOR cipher.");
     utils::print_symbol(PRINT_L,'*');
@@ -93,6 +101,7 @@ fn challenge_3(){
 }
 
 fn challenge_4(){
+    utils::clear_c();
     utils::print_new_lines(2);
     utils::print_with_spaces(PRINT_L, "Challenge 4 = Detect single-character XOR.");
     utils::print_symbol(PRINT_L,'*');
@@ -100,6 +109,7 @@ fn challenge_4(){
 }
 
 fn exit_program(){
+    utils::clear_c();
     utils::print_new_lines(2);
     utils::print_symbol(PRINT_L,'*');
     utils::print_with_spaces(PRINT_L, "Thank you for using this program!");

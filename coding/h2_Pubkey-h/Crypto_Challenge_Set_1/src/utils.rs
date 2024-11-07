@@ -42,3 +42,7 @@ pub fn print_new_lines(amount: u32){
         println!("");
     }
 }
+
+pub fn clear_c(){
+    clearscreen::clear().unwrap();
+}
