@@ -1,5 +1,11 @@
+//////////////////////////////////////////////////////////////
+/// A selection of useful tools for every day applications ///
+//////////////////////////////////////////////////////////////
+
 use std::string::String;
 use std::str;
+use std::{thread, time::Duration};
+use std::io::Write;
 
 pub fn print_symbol(amount: u32, symbol: char){
     for i in 0..amount{
@@ -45,4 +51,66 @@ pub fn print_new_lines(amount: u32){
 
 pub fn clear_c(){
     clearscreen::clear().unwrap();
+}
+
+pub fn sleep_for_seconds(seconds: u64){
+    let times_s: u64 = seconds * 1000;
+    thread::sleep(Duration::from_millis(times_s));
+}
+
+pub fn get_numeric_input() -> u32 {
+    let n: u32;
+    let mut input:String;
+
+    print!("Please enter a number: ");
+
+    loop{
+        std::io::stdout().flush().unwrap();
+        input = String::new();
+        std::io::stdin().read_line(&mut input).expect("Failed to read line");
+
+        let input:&str = input.trim();
+
+        let mut is_input_numeric: bool = true;
+
+        for c in input.chars(){
+            if !c.is_numeric(){
+                is_input_numeric = false;
+            }
+        }
+
+        if is_input_numeric {
+            n = match input.parse() {
+                Ok(num) => num,
+                Err(_) => continue,
+            }; 
+            break;
+        }else{
+            println!("Input is not numeric, please input a numeric value!");
+            sleep_for_seconds(2)
+        } 
+    }
+    n 
+}
+
+pub fn get_string_input() -> String {
+    let mut input: String;
+
+    print!("Please enter a text value: ");
+
+    loop{
+        std::io::stdout().flush().unwrap();
+        input = String::new();
+        std::io::stdin().read_line(&mut input).expect("Failed to read line");
+
+        let input:&str = input.trim();
+
+        if !input.is_empty() {
+            break;
+        }else{
+            println!("No input received , please input a text value!");
+            sleep_for_seconds(2)
+        } 
+    }
+    input
 }
