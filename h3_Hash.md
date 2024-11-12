@@ -31,10 +31,54 @@ Links to assignment answers.
 ## x
 
 >x) Read and summarize (with some bullet points)
+>
 >- € Schneier 2015: Applied Cryptography: Chapter 2 - Protocol Building Blocks: subchapters "2.3 One-way Fuctions" and "2.4 One-Way Hash Functions".
 >- Karvinen 2022: Cracking Passwords with Hashcat
 >- Voluntary bonus article (but recommended if you're not familiar with Linux command line): Karvinen 2020: Command Line Basics Revisited
 >- Voluntary bonus article: € Santos et al 2017: Security Penetration Testing - The Art of Hacking Series LiveLessons: Lesson 6: Hacking User Credentials (8 videos, about 30 min)
+
+### € Schneier 2015: Applied Cryptography: Chapter 2 - Protocol Building Blocks: subchapters "2.3 One-way Fuctions" and "2.4 One-Way Hash Functions".
+
+The document summarized can be read at the O'Reilly website, **Note that the site requires registration**  : [Schneier 2015: Applied Cryptography](https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/10_chap02.html#chap02-sec003)
+
+The document details in general how one way and one-way hash functions work and are used in general and with some technical detail added but without going in to much to the computational details.
+
+#### One-way functions
+
+- One-way function in general is a function that is easy to compute, but very hard to reverse. Meaning that it is hard to deduce from the output that the function produces, what the original input was.
+  - A trapdoor one-way function is an one-way function that works the same way but if you the secret to it (*The "trapdoor"*), you can easily compute the original input.
+- The concept of one-way functions is pivotal in public-key cryptography.
+- One-way functions are not the ideal solutions for encryption, since by their nature they are not meant to be decrypted.
+  - A trapdoor one-way function would be a better choice for this, but like with public-key cryptography in general, keep the secret trapdoor a secret.
+
+The document does state that there is no proof that one-way functions exist or can bo constructed if they are scrutinized mathematically, but I think this is relatable to the question *"What is actually random"*, so one would assume that they have to work one-way enough to work properly, in what I mean is that within the limits of our current technology, they should work as intended.
+
+The document gave an example of a broken porcelain plate, which in my opinion was a good one, a plate easy to brake but hard to reassemble to it's original form.
+
+#### One-way hash functions
+
+- One-way hash functions can be considered one of the building blocks for modern cryptography and in one way or another have been used in computing for a long time. They work by digesting an input string (*String: a sequence of characters*), which is of variable length and converting it to a fixed length output string, or in other words, converting a arbitrary sized string to a fixed-sized string. The input is called a pre-image and the output a hash value.
+- As with one-way functions, these functions work in one way, meaning that it's nearly impossible (Nearly, since in the long run with technology, nothing is impossible) to calculate the input from the output.
+- Hash functions are made public, since the security of it lays in it's "*one-wayness*", so by examining it's code, one cannot form a method of reversing the output.
+  - I would assume that there are private hahs functions in use, used in super secret applications but at the moment I can't confirm this.
+- For a one-way hash function to work properly, it should be collision-free (Hash clash is a funny term I remember mentioned in my previous studies).
+  - It should be hard to produce the same Hash value from different pre-images.
+  - This makes each hash-value a unique one, which is important in cryptography (Digital signatures for example) and comparing checksums (Verify integrity of a downloaded file for example). These two being only examples of many applications.
+
+The document also explains the message authentication code (MAC), which is also called the data authentication code (DAC).It's a hash-function, that's hash-value can only be verified by a symmetric key used with the hash-function. It adds an extra layer of security, since only the ones with the symmetric key can verify the hash-value. This is not to be confused with Digital signatures, since only one key is used in this process.  I found this to be quite interesting, since the concept is new to me.
+
+### Karvinen 2022: Cracking Passwords with Hashcat
+
+The document summarized can be read at the Tero Karvinen website, **Note that the site  does not require registration**  : [Cracking Passwords with Hashcat](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/)
+
+### Karvinen 2020: Command Line Basics Revisited
+
+The document summarized can be read at the Tero Karvinen website, **Note that the site  does not require registration**  : [Command Line Basics Revisited](https://terokarvinen.com/2020/command-line-basics-revisited/)
+
+### € Santos et al 2017: Security Penetration Testing - The Art of Hacking Series LiveLessons: Lesson 6: Hacking User Credentials
+
+The videos summarized can be read at the O'Reilly website, **Note that the site requires registration**  : [Security Penetration Testing The Art of Hacking Series LiveLessons](https://learning.oreilly.com/videos/security-penetration-testing/9780134833989/9780134833989-sptt_00_06_02_00/)
+
 
 ## a
 
