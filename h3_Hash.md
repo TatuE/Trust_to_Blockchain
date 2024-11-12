@@ -10,6 +10,19 @@ Full assignment can be viewed at the courses website : [h3 Hash](https://terokar
 
 ## Assignment answers
 
+As with the previous assignment, all assignments in this report that require a computer and testing are performed by using my own PC.
+
+### System environment
+
+- Computer
+  - CPU: AMD 7700 (Clocked @ 5.45 GHz)
+  - Motherboard: ASUS B650M-plus-wifi
+  - Memory: 32 GB DDR5 6000MHz
+  - Graphics card: AMD RX 7900XTX
+  - Storage: 1TB Western digital black SN850X (m.2, nvme)
+  - Desktop: KDE plasma 6 (Wayland)
+  - Package manager: pacman
+
 ### Assignment links
 
 Links to assignment answers.
@@ -58,7 +71,7 @@ The document gave an example of a broken porcelain plate, which in my opinion wa
 #### One-way hash functions
 
 - One-way hash functions can be considered one of the building blocks for modern cryptography and in one way or another have been used in computing for a long time. They work by digesting an input string (*String: a sequence of characters*), which is of variable length and converting it to a fixed length output string, or in other words, converting an arbitrary sized string to a fixed-sized string. The input is called a pre-image and the output a hash value.
-- As with one-way functions, these functions work in general are one way, meaning that it's nearly impossible (Nearly, since in the long run with technology, nothing is impossible) to calculate the input from the output.
+- As with one-way functions, these functions work are one way, meaning that it's nearly impossible (Nearly, since in the long run with technology, nothing is impossible) to calculate the input from the output.
 - Hash functions are made public, since the security of it lays in it's "*one-wayness*", so by examining it's code, one cannot form a method of reversing the output.
   - I would assume that there are private hahs functions in use, used in super secret applications but at the moment I can't confirm this.
 - For a one-way hash function to work properly, it should be collision-free (Hash clash is a funny term I remember mentioned in my previous studies).
@@ -70,6 +83,21 @@ The document also explains the message authentication code (MAC), which is also 
 ### Karvinen 2022: Cracking Passwords with Hashcat
 
 The document summarized can be read at the Tero Karvinen website, **Note that the site  does not require registration**  : [Cracking Passwords with Hashcat](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/)
+
+In his article, Tero demonstrates how to use Hashcat fot password cracking. I like that he likes to remind the ethics and legal consideration of using penetration testing techniques, this is an important thing to remind now and again.
+
+For this demonstration Tero uses *6b1628b016dff46e6fa35684be6acc96* as the hash to be cracked.
+
+Tero uses Debian 11 Bullseye for this demonstration, running the linux os as a virtual machine in Virtual Box. He updates the system and installs hashcat and hashid. 
+Hashid tries to identify what type of hash is used and hashcat is used for the cracking.
+
+Tero downloads the rockyou.txt password dictionary, from Daniel Miessler's Github repository. The dictionary contains a list of passwords, leaked ones and ones that are some what obvious to guess. All in all the list contains over 14 million words.
+
+Tero identifies the hash by using hashid and it identifies it to be MD2, MD4 or MD5. Tero determines that it could be MDS5, since it's more common than MD2 or MD4.
+He uses hashcat to crack the the hash and it turns out that MD5 was the correct assumption and the hash is revealed to be *summer*. The article does not specify this, but hascat goes through the rockyou.txt dictionary, generating a MD5 hash of the words and comparing it with the hash attempted to be cracked. As explained in the article, if a match with the hashes is found, it reports the correct hash and the word that produces it. 
+The cracking was relatively fast, taking 4.6 milliseconds. The cracking speed was 37401.1 kH/s, 37 million words a second. Hard to say if this is fast or not, but Tero also suggest that using real hardware (not a virtual machine) and a GPU will make this even faster. I think I should give my AMD card a try, Tero mentions Nvidia but it has it's problems with open source. [Linus Torvalds also had an opinion on this](https://www.youtube.com/watch?v=_36yNWw_07g)
+
+
 
 ### Karvinen 2020: Command Line Basics Revisited
 
