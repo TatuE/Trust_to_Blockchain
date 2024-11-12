@@ -57,13 +57,13 @@ The document gave an example of a broken porcelain plate, which in my opinion wa
 
 #### One-way hash functions
 
-- One-way hash functions can be considered one of the building blocks for modern cryptography and in one way or another have been used in computing for a long time. They work by digesting an input string (*String: a sequence of characters*), which is of variable length and converting it to a fixed length output string, or in other words, converting a arbitrary sized string to a fixed-sized string. The input is called a pre-image and the output a hash value.
-- As with one-way functions, these functions work in one way, meaning that it's nearly impossible (Nearly, since in the long run with technology, nothing is impossible) to calculate the input from the output.
+- One-way hash functions can be considered one of the building blocks for modern cryptography and in one way or another have been used in computing for a long time. They work by digesting an input string (*String: a sequence of characters*), which is of variable length and converting it to a fixed length output string, or in other words, converting an arbitrary sized string to a fixed-sized string. The input is called a pre-image and the output a hash value.
+- As with one-way functions, these functions work in general are one way, meaning that it's nearly impossible (Nearly, since in the long run with technology, nothing is impossible) to calculate the input from the output.
 - Hash functions are made public, since the security of it lays in it's "*one-wayness*", so by examining it's code, one cannot form a method of reversing the output.
   - I would assume that there are private hahs functions in use, used in super secret applications but at the moment I can't confirm this.
 - For a one-way hash function to work properly, it should be collision-free (Hash clash is a funny term I remember mentioned in my previous studies).
   - It should be hard to produce the same Hash value from different pre-images.
-  - This makes each hash-value a unique one, which is important in cryptography (Digital signatures for example) and comparing checksums (Verify integrity of a downloaded file for example). These two being only examples of many applications.
+  - This makes each hash value a unique one, which is important in cryptography (Digital signatures for example) and comparing checksums (Verify integrity of a downloaded file for example). These two being only examples of many applications.
 
 The document also explains the message authentication code (MAC), which is also called the data authentication code (DAC).It's a hash-function, that's hash-value can only be verified by a symmetric key used with the hash-function. It adds an extra layer of security, since only the ones with the symmetric key can verify the hash-value. This is not to be confused with Digital signatures, since only one key is used in this process.  I found this to be quite interesting, since the concept is new to me.
 
