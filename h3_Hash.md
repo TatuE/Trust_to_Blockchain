@@ -6,7 +6,7 @@
 
 ## Assignment
 
-Full assignment can be viewed at the courses website : [h2 Pubkey](https://terokarvinen.com/trust-to-blockchain/#h3-hash)
+Full assignment can be viewed at the courses website : [h3 Hash](https://terokarvinen.com/trust-to-blockchain/#h3-hash)
 
 ## Assignment answers
 
