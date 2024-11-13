@@ -284,4 +284,35 @@ This was a pleasant new introduction to John. It turned out that the password wa
 >
 >*$ sudo grep elmik9 /etc/passwd /etc/shadow*  
 >*/etc/passwd:elmik9:x:1003:1003:Elmeri "9" Elmik,,,:/home/elmik9:/bin/bash*  
->*/etc/shadow:elmik9:$1$xpRkwrhq$aXdu7HQirUmuTZW2m8OXs.:18401:0:99999:7:::*  
+>*/etc/shadow:elmik9:$1$xpRkwrhq$aXdu7HQirUmuTZW2m8OXs.:18401:0:99999:7:::* 
+
+This is also a late submission but I got a little carried away with this one.
+
+### Custom dictionary
+
+This assignment part specifies on using a custom dictionary, but who to compile one?
+
+For this I again wrote a small python program, *password_dictionary_merger.py*, which is also available in the "*programming*" folder.
+The idea of this program is simple, iterate though files in a folder, check for duplicate words and ccreate a new file containing a list of unique words from the file samples. It even timestamps it!
+
+I downloaded a set of password dictionaries from Krypton's repository [wordlists ](https://github.com/kkrypt0nn/wordlists/tree/main/wordlists/passwords), executed the program and got a decent set of passwords for my new dictionary (**over 16 million**).
+
+| Starting the program                      | Program end                                   |
+| ----------------------------------------- | --------------------------------------------- |
+| ![](/img/password_merger-1.png)           | ![](/img/password_merger-2.png)               |
+
+**Note!** At this time the python program handles plain strings, the rockyou.txt unfortunately generates errors, since it includes a invalid continuation byte that UTF-8 can't handle that well. But any way, the initial idea was not to use the rockyou.txt.
+
+### Cracking
+
+Since we met John in the previous part of this assignment, we will continue using it with this one. 
+
+I found an article on how to crack linux passwords : [cracking /etc/shadow with John](https://erev0s.com/blog/cracking-etcshadow-john/) and it details a pretty simple way of doing this using John.
+
+![](/img/password_merger-3.png)
+
+
+Funny enough, John cannot crack this with my password dictionaries (my new one or rockyou.txt), but when I ran John without a dictionary, it determined that the password is **elmik9**. For some reason I dought this but it could be it, hard to say. 
+There is a change that John might not work correctly, but since I managed to crack a password before, I would assume it's working. 
+One option could be that I just needed a more diverse password dictionary. 
+
