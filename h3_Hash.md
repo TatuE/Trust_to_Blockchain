@@ -230,7 +230,7 @@ Since dictionary attacks are based on known, or guessed passwords that have been
 
 This actually was a two minute assignment. When I started cracking this hashcat warned that *performance is lower than expected* and it truly was, with a MD5 hash cracking speed was 316.0 MH/s, with Blowfish it was just 13 H/s. So I started the cracking and went to lunch, when I came back hascat was finished and it had taken it just a little over two minutes. The hash turned out to be 12345. But in reality this hash rate is really. really slow.
 
-![](/img/blowfish-1.png)
+![](/img/Blowfish-1.png)
 
 ## g
 
