@@ -204,6 +204,7 @@ It has been a few years since I last used Virtualbox, I have had little need to 
     - Memory: 32 GB DDR5 6000MHz
     - Graphics card: AMD RX 7900XTX
     - Storage: 1TB Western digital black SN850X (m.2, nvme)
+    - Operating system: EndeavourOS (Arch linux)
     - Desktop: KDE plasma 6 (Wayland)
     - Package manager: pacman
 

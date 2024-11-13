@@ -20,6 +20,7 @@ As with the previous assignment, all assignments in this report that require a c
   - Memory: 32 GB DDR5 6000MHz
   - Graphics card: AMD RX 7900XTX
   - Storage: 1TB Western digital black SN850X (m.2, nvme)
+  - Operating system: EndeavourOS (Arch linux)
   - Desktop: KDE plasma 6 (Wayland)
   - Package manager: pacman
 
@@ -255,9 +256,25 @@ I kind of answered this in [assignment c](h3_Hash.md#c) while installing hashcat
 
 >j) John. Install Jumbo John (John the Ripper, open source Jumbo version). Compile it from source code as needed. See Karvinen 2023 Crack File Password With John.
 
+Oh dear me! It seems that I missed the fact that this part of the assignment was not voluntary. This addition is made after assignment deadline and should be judged accordingly.
+
+I found that the Arch linux repositories have [John the ripper](https://archlinux.org/packages/extra/x86_64/john/) included and it seems that it's decently up to date. Let's try this one.
+
+![](/img/john-1.png)
+
+Seems to be working, but we will soon find out.
+
 ## k
 
 >k) Crack file password with John.
+
+Since this part of the assignment is also returned after the deadline, I'm in a bit of a hurry. Since the program is new to me (at least I can't recall using it), let's use the instructions from Tero's article [Crack File Password With John](https://terokarvinen.com/2023/crack-file-password-with-john/).
+
+Let's down the .zip file as instructed and try to crack it's password. 
+
+![](/img/john-cracking-1.png)
+
+This was a pleasant new introduction to John. It turned out that the password was butterfly and with that we can unlock the .zip file.
 
 ## l
 
