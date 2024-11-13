@@ -125,6 +125,27 @@ If i'm not completely wrong, the leading zeros in a SHA256 hash is related to th
 - [Bitcoin mining difficulty](https://en.bitcoin.it/wiki/Difficulty/)
 - [Target](https://en.bitcoin.it/wiki/Target)
 
+>Voluntary difficult bonus: How many zeros can you get to the beginning?
+
+I kind of cheated with this one. Since typing randomly in the terminal to produce a result is quite tiresome, I created a small python program that does the job for me. I must admit that it took me a while and I also tried to find some inspiration from stackoverflow.
+
+In the end, I found a random string that produced seven (7) leading zeros in a SHA256 hash. I was attempting to find a string that would produce eight (8) zeros but my time ran out regarding the assignment deadline.
+The Python program can be found from the "*programming*" folder.
+
+So here are the results from this quest:
+
+- A random value 19fe03ea4f71be815dda08c4f8c3880fd8098253358a84adcf38104c681c654f produced a SHA256 hash with at least 1 leading zeros . Winning hash is = 0a8123ee6785044804e41be1bf936feae8f3a1b91a6e9b534ba3d255eab64ac8 | This process took 25 rounds to complete.
+- A random value f12b23e0eaf495661ed5ff9ca43cf56c286abbd0357248107f028cd127bd44d0 produced a SHA256 hash with at least 2 leading zeros . Winning hash is = 00981ffc7984b34346579d4d319cebfa443d2ea1695df03ef678d95d4b4bb958 | This process took 28 rounds to complete.
+- A random value ef9d14825ade4a29e41e7ddd312173b32fc3b5e5bfc56f8e23ba6973e882fc43 produced a SHA256 hash with at least 3 leading zeros . Winning hash is = 00016775c1a712ce49ae2be92cb8d47ff6ec2b80aa945a62fd81a538a936f4a3 | This process took 3038 rounds to complete.
+- A random value 263b82fd8438f9dd8d361353a59cda4f9587b2fe55b1e807f34233742dc47ab2 produced a SHA256 hash with at least 4 leading zeros . Winning hash is = 0000330FFDA47FB8D64F0CF947D1A15C616496F580771954C3927CA0F5DA7931 | This process took 54072 rounds to complete.
+- A random value 809790a62e54280c4283f3a033b00ea47768707fd726286d4494c71f07f34d29 produced a SHA256 hash with at least 5 leading zeros . Winning hash is = 0000042af4ee85f2fdc0f204cacf6fe7be296b413de0847d1550a73e40f46cf7 | This process took 1450162 rounds to complete.
+- A random value ef790512fb46c576b5514faeaf62bf6509736ee344cf42cc746360df9959ccf6 produced a SHA256 hash with at least 6 leading zeros . Winning hash is = 000000cbb22ebfaa839c245cf298499a9967b66f579bdaa080ac877dc735577d | This process took 16730447 rounds to complete.
+- A random value 68dd8403b6b2cc3e7a6b8035296291e31ddaa4df197f4f8d03692053ff366251 produced a SHA256 hash with at least 7 leading zeros . Winning hash is = 000000023441b867664848fccf74a3fb5cb446cd366f9681cbe064d50452463c | This process took 198527187 rounds to complete.
+
+![](/img/finding_zeros-1.png)
+
+>Voluntary difficult bonus: How does the difficulty raise?
+
 ## b
 
 >b) Compare hash. Create a small text file. Take it's hash (e.g. 'sha256sum tero.txt'). Change one letter. Take the hash again. Compare hashes. What do you notice?
