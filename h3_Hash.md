@@ -312,7 +312,4 @@ I found an article on how to crack linux passwords : [cracking /etc/shadow with 
 ![](/img/password_merger-3.png)
 
 
-Funny enough, John cannot crack this with my password dictionaries (my new one or rockyou.txt), but when I ran John without a dictionary, it determined that the password is **elmik9**. For some reason I dought this but it could be it, hard to say. 
-There is a change that John might not work correctly, but since I managed to crack a password before, I would assume it's working. 
-One option could be that I just needed a more diverse password dictionary. 
-
+Funny enough, John cannot crack this with my password dictionaries (my new one or rockyou.txt), but when I ran John without a dictionary, it determined that the password for Elmeri is **elmik9**.
