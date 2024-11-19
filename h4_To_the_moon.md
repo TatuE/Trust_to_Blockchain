@@ -57,6 +57,7 @@ The document details the foundation that is used with bitcoin.
 
 ### Sources: 
 - [Electrum Documentation](https://electrum.readthedocs.io/en/latest/)
+  - I started to read this, but in the end, the practical answers I found by trial and error (not that many errors actually).
 
 Now Bitcoin (and cryptocurrency in general) is something that I've been interested in, but I have never used, bought or mined it. I've used [XMRig](https://xmrig.com/) for benchmarking but not mining.
 
@@ -106,6 +107,24 @@ The only difference is that the program kindly reminds you that you are in testn
 
 ![](/img/electrum_testnet-1.png)
 
+Honestly, at first I was a bit lost with this one. I used the faucet address mentioned in the assignment, but for the life of me I could not find my *testnet address*.
+I did what I usually do, start looking around and poking the program.
+
+In the process managed to check that I was connected. 
+
+![](/img/electrum_testnet-2.png)
+
+I'm not sure ig this a bug with the Arch linux version (or maybe again problem with Wayland),
+but the only way I could find my testnet address was by creating an empty receive request.  
+Once created, my testnet address was displayed in the box on the right side. 
+
+![](/img/electrum_testnet-4.png)
+
+After that, I inserted my address to the faucets web page, did a CAPTCHA check and moments later, I was ~0.19 millibitcoins "richer".
+
+| 1. Insert testnet address             | 2. Do CAPTCHA                         | 3. Profit..                                   |
+| ------------------------------------- | -----------------------------------   | --------------------------------------------- |
+| ![](/img/electrum_testnet-5.png)      | ![](/img/electrum_testnet-6.png)      | ![](/img/electrum_testnet-7.png)              |
 
 ## c
 
