@@ -37,7 +37,7 @@ Links to assignment answers.
 
 >x) Read and summarize (with some bullet points)
 >
->- Nakamoto 2008: Bitcoin: A Peer-to-Peer Electronic Cash System (A colored HTML version), chapters
+>- Nakamoto 2008: Bitcoin: [A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf) [(A colored HTML version)](https://git.dhimmel.com/bitcoin-whitepaper/), chapters
 >   - 1 Introduction
 >   - 2 Transactions
 >   - 3 Timestamp Server
@@ -47,9 +47,7 @@ Links to assignment answers.
 
 ### Nakamoto 2008: Bitcoin: A Peer-to-Peer Electronic Cash System
 
-The document summarized can be read at the O'Reilly website, **Note that the site requires registration**  : [Schneier 2015: Applied Cryptography](https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/10_chap02.html#chap02-sec003)
-
-The document details in general how one way and one-way hash functions work and are used in general and with some technical detail added but without going in to much to the computational details.
+The document summarized can be read at the bitcoin.org website : [Nakamoto 2008: Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
 
 ## a
 
