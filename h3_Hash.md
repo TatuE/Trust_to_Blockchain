@@ -178,10 +178,11 @@ Once we have downloaded, extracted and checked the rockyou.txt file we can test 
 While testing I found out that hashcat was quite a picky on drivers. It did not work with my AMD CPU and it took me over an hour to get it to it to work with an AMD GPU (discrete or integrated).
 
 In short:
-  - With Arch linux, use the AUR package for hascat (the arch linux hascat package did not work correctly).
-    - Install [hashcat-git](https://aur.archlinux.org/packages/hashcat-git)
-  - For AMD GPU, install tne rocm opencl package [rocm-opencl-runtime](https://archlinux.org/packages/?name=rocm-opencl-runtime)
-    - Tried the opencl-amd and the hip amd drivers with out success.
+
+- With Arch linux, use the AUR package for hascat (the arch linux hascat package did not work correctly).
+  - Install [hashcat-git](https://aur.archlinux.org/packages/hashcat-git)
+- For AMD GPU, install tne rocm opencl package [rocm-opencl-runtime](https://archlinux.org/packages/?name=rocm-opencl-runtime)
+  - Tried the opencl-amd and the hip amd drivers with out success.
 
 And again, I found the answer from [Arch wiki](https://wiki.archlinux.org/title/GPGPU) :)
 
