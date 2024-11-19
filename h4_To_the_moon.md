@@ -49,15 +49,64 @@ Links to assignment answers.
 
 The document summarized can be read at the bitcoin.org website : [Nakamoto 2008: Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
 
+The document details the foundation that is used with bitcoin.
+
 ## a
 
 >a) Wallet. Create a BitCoin testnet wallet. (For example, electrum)
-It took me a few tries to get the leading zero, in this case the string that produced is was *hello-adsf13*
+
+### Sources: 
+- [Electrum Documentation](https://electrum.readthedocs.io/en/latest/)
+
+Now Bitcoin (and cryptocurrency in general) is something that I've been interested in, but I have never used, bought or mined it. I've used [XMRig](https://xmrig.com/) for benchmarking but not mining.
+
+Since I'm a bit of a newbie to this, I'll try Tero's suggestion and install electrum for this.
+
+Let's update the system and install it.
+
+| Electrum install                          |                                               |
+| ----------------------------------------- | --------------------------------------------- |
+| ![](/img/electrum_installation-1.png)     | ![](/img/electrum_installation-2.png)         |
+
+After the installation, let's start the program.
+
+![](/img/electrum_installation-3.png)
+
+Since it seems that the program is working, let's create a wallet. The process is pretty straight forward, just read the on screen instructions.
+
+| Create a new wallet                   | What kind of wallet                   | Create a new seed                             | Review and save new seed              |
+| ------------------------------------- | -----------------------------------   | --------------------------------------------- | ------------------------------------- |
+| ![](/img/electrum_installation-4.png) | ![](/img/electrum_installation-5.png) | ![](/img/electrum_installation-6.png)         | ![](/img/electrum_installation-7.png) |
+
+| Confirm new seed                      | Add a password for the wallet         | New wallet created                            |
+| ------------------------------------- | -----------------------------------   | --------------------------------------------- |
+| ![](/img/electrum_installation-8.png) | ![](/img/electrum_installation-9.png) | ![](/img/electrum_installation-10.png)        |
+
+Since I don't trust post-it-notes, I saved the wallet seed and password to the password manager created in [h2]().
+
+![](/img/electrum_installation-password.png)
+
+### Personal note
+
+The Gui of Electrum in Arch linux is a bit buggy, it seems that Wayland is to blame.  
+**Note to self:** After this course, reinstall the system and use i3 or xfce fot the desktop environment, since by recollection, they still use [Xorg](https://wiki.archlinux.org/title/Xorg).
 
 ## b
 
 >b) Faucet. Get worthless fake money from a testnet Bitcoin faucet.
-c
+
+It seems that in the previous part I forgot to start Electrum to used with testnet.  
+This can be done by adding the *--testnet* parameter while starting the program
+
+- *electrum --testnet*
+
+I intended to use the same wallet as before, but it seems that this will not work, so I will have to create a new wallet.  
+No documentation added, since the process is the same as with [assignment a](h4_To_the_moon.md#a).  
+The only difference is that the program kindly reminds you that you are in testnet mode.
+
+![](/img/electrum_testnet-1.png)
+
+
 ## c
 
 > c) Giveway. Move money to another Bitcoin wallet. Choose an amount where the last two digists are 73.
