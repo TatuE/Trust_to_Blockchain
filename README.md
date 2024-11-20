@@ -13,3 +13,4 @@ Course description can be found at the courses website [Trust to Blockchain 2024
 - [h1 Adversarial mindset](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h1_Adversarial_mindset.md)
 - [h2 pubkey](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h2_Pubkey.md)
 - [h3 Hash](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h3_Hash.md)
+- [h4 to the moon!](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h4_To_the_moon.md)
