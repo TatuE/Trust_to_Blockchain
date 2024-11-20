@@ -51,6 +51,12 @@ The document summarized can be read at the bitcoin.org website : [Nakamoto 2008:
 
 The document details the foundation that is used with bitcoin.
 
+As stated in the introduction, modern digital payments have an underlying weakness, they mostly rely on financial institutions to process these transactions and they are based on trust between the payer and payee.
+The payer can default on the payment to the payee and the financial institutions handling this transaction work as mediaries on these disputes.
+This leds to increases in transaction costs and an underlying distrust between parties.
+
+The paper suggest a a solution, where two parties could perform a transaction without the need for third party intermediaries, in a way electronic payment system that is based on cryptographyv 
+
 ## a
 
 >a) Wallet. Create a BitCoin testnet wallet. (For example, electrum)
