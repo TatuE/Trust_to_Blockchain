@@ -97,25 +97,25 @@ Let's update the system and install it.
 
 | Electrum install                          |                                               |
 | ----------------------------------------- | --------------------------------------------- |
-| ![](/img/electrum_installation-1.png)     | ![](/img/electrum_installation-2.png)         |
+| ![picture](/img/electrum_installation-1.png)     | ![picture](/img/electrum_installation-2.png)         |
 
 After the installation, let's start the program.
 
-![](/img/electrum_installation-3.png)
+![picture](/img/electrum_installation-3.png)
 
 Since it seems that the program is working, let's create a wallet. The process is pretty straight forward, just read the on screen instructions.
 
 | Create a new wallet                   | What kind of wallet                   | Create a new seed                             | Review and save new seed              |
 | ------------------------------------- | -----------------------------------   | --------------------------------------------- | ------------------------------------- |
-| ![](/img/electrum_installation-4.png) | ![](/img/electrum_installation-5.png) | ![](/img/electrum_installation-6.png)         | ![](/img/electrum_installation-7.png) |
+| ![picture](/img/electrum_installation-4.png) | ![picture](/img/electrum_installation-5.png) | ![picture](/img/electrum_installation-6.png)         | ![picture](/img/electrum_installation-7.png) |
 
 | Confirm new seed                      | Add a password for the wallet         | New wallet created                            |
 | ------------------------------------- | -----------------------------------   | --------------------------------------------- |
-| ![](/img/electrum_installation-8.png) | ![](/img/electrum_installation-9.png) | ![](/img/electrum_installation-10.png)        |
+| ![picture](/img/electrum_installation-8.png) | ![picture](/img/electrum_installation-9.png) | ![picture](/img/electrum_installation-10.png)        |
 
 Since I don't trust post-it-notes, I saved the wallet seed and password to the password manager created in [h2]().
 
-![](/img/electrum_installation-password.png)
+![picture](/img/electrum_installation-password.png)
 
 ### Personal note
 
@@ -135,26 +135,26 @@ I intended to use the same wallet as before, but it seems that this will not wor
 No documentation added, since the process is the same as with [assignment a](h4_To_the_moon.md#a).  
 The only difference is that the program kindly reminds you that you are in testnet mode.
 
-![](/img/electrum_testnet-1.png)
+![picture](/img/electrum_testnet-1.png)
 
 Honestly, at first I was a bit lost with this one. I used the faucet address mentioned in the assignment, but for the life of me I could not find my *testnet address*.
 I did what I usually do, start looking around and poking the program.
 
 In the process managed to check that I was connected. 
 
-![](/img/electrum_testnet-2.png)
+![picture](/img/electrum_testnet-2.png)
 
 I'm not sure ig this a bug with the Arch linux version (or maybe again problem with Wayland),
 but the only way I could find my testnet address was by creating an empty receive request.  
-Once created, my testnet address was displayed in the box on the right side. 
+Once created, my testnet address was displayed in the box on the right side.
 
-![](/img/electrum_testnet-4.png)
+![picture](/img/electrum_testnet-4.png)
 
 After that, I inserted my address to the faucets web page, did a CAPTCHA check and moments later, I was ~0.19 millibitcoins "richer".
 
 | 1. Insert testnet address             | 2. Do CAPTCHA                         | 3. Profit..                                   |
 | ------------------------------------- | -----------------------------------   | --------------------------------------------- |
-| ![](/img/electrum_testnet-5.png)      | ![](/img/electrum_testnet-6.png)      | ![](/img/electrum_testnet-7.png)              |
+| ![picture](/img/electrum_testnet-5.png)      | ![picture](/img/electrum_testnet-6.png)      | ![picture](/img/electrum_testnet-7.png)              |
 
 ## c
 
@@ -165,9 +165,9 @@ The process was in my opinion pretty straight forward and I could find my way wi
 
 | 1. Start transaction                      | 2. Confirm transaction                    | 3. review                                     |
 | ----------------------------------------- | ----------------------------------------- | --------------------------------------------- |
-| ![](/img/electrum-wallet-transfer-1.png)  | ![](/img/electrum-wallet-transfer-2.png)  | ![](/img/electrum-wallet-transfer-3.png)      |
+| ![picture](/img/electrum-wallet-transfer-1.png)  | ![picture](/img/electrum-wallet-transfer-2.png)  | ![picture](/img/electrum-wallet-transfer-3.png)      |
 
-I chose the *Static* method, because it seemed to be the cheapest one but the transaction remained *unconfirmed*. 
+I chose the *Static* method, because it seemed to be the cheapest one but the transaction remained *unconfirmed*.
 It seems that this is just related to the process on which transactions are processed, and it can take time. It seems that one can speed this up by increasing the transaction fee.
 **Update**, the application is stating that the server is lagging, so maybe the only solutions is to wait.
 
@@ -183,9 +183,7 @@ So out of desperation, I used the the output address. I checked that it was not 
 
 | Make payment                              | Review                                        |
 | ----------------------------------------- | --------------------------------------------- |
-| ![](/img/electrum-return-1.png)           | ![](/img/electrum-return-2.png)               |
-
-
+| ![picture](/img/electrum-return-1.png)           | ![picture](/img/electrum-return-2.png)               |
 
 ## e
 
@@ -194,10 +192,9 @@ So out of desperation, I used the the output address. I checked that it was not 
 For this I did a search with the web browser using keywords "*bitcoin explorer*", like the assignment suggested.
 I settled on the [bitcoin explorer](https://bitcoinexplorer.org) website and selected the lates block 817177 (817177 is the height of the blockchain, meaning 817177 block after the genesis block(numbered 0)). Unfortunately I'm in a hurry, so I did not have time to search for a more interesting block.
 
-
 | Main page                                 | Block 817,117                                 |
 | ----------------------------------------- | --------------------------------------------- |
-| ![](/img/explorer-1.png)                  | ![](/img/explorer-2.png)                      |
+| ![picture](/img/explorer-1.png)                  | ![picture](/img/explorer-2.png)                      |
 
 I'll try to analyze this block from the block summary JSON. I will list them if I can answer them.
 
@@ -332,7 +329,7 @@ These are the most valid answers I could find, it seems that black headers are m
 - Merkle root hash
 - Timestamp
 - Difficulty ("*Bits*")
-- Nonce 
+- Nonce
 
 I picked a recent transaction on the block (made 20.11.2024 at 13:13). I*ll try to analyze it like the block previously.
 
@@ -430,7 +427,7 @@ Crypto currencies value in a investment form is volatile, because it's based on 
 
 ## Crypto currency as a status symbol
 
-Yeah, maybe the image that the video refered to  not the right image 
+Yeah, maybe the image that the video referred to  not the right image.
 
 ## The need for technical knowledge of operation
 
@@ -444,7 +441,6 @@ I would not called it needles, since the reason is to keep blockchain running an
 
 I think this is also highly debatable, since crypto currency just need electricity, which can be produced with renewable methods. Also like the idea to use the excess heat to warm up homes and businesses. For example [google](https://energydigital.com/articles/how-googles-data-centre-waste-heat-is-heating-finnish-homes) is doing this in Hamina with their data centers.
 I tried to find how much energy the "regular" monetary system uses on a daily bases for comparison but unfortunately I could not find any info on it.
-
 
 ## g
 
