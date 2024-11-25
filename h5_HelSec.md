@@ -22,6 +22,13 @@ So, on to the assignment, the presentations.
 
 #### Jos Helmich - Industrial Cyber Security
 
+
+
+| Additional media                                  | Mirror country                                    | Mirror address                                    |  HTTP proxy                                       | Configuration                                     |
+| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| ![picture]()     | ![picture]()     | ![picture]()     | ![picture]()     | ![picture]()     |
+
 #### Heikki ”zokol” Juva - State of Union
 
 #### Joona "Rinorragi" Immonen - My experiences on Defender External Attack Surface Management
+
