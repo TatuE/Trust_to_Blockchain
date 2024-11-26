@@ -18,11 +18,9 @@ I managed to get a ticket for his event and ended up staying through the whole e
 
 All in all the event was quite pleasant. The venue was excellent for the purpose, there was even free pizza, for which I did not partake since I was tourist, let's not start free loading from the get go.
 
-So, on to the assignment, the presentations.
+So, on with the assignment, the show.
 
 #### Jos Helmich - Industrial Cyber Security
-
-
 
 | Additional media                                  | Mirror country                                    | Mirror address                                    |  HTTP proxy                                       | Configuration                                     |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
@@ -31,4 +29,3 @@ So, on to the assignment, the presentations.
 #### Heikki ”zokol” Juva - State of Union
 
 #### Joona "Rinorragi" Immonen - My experiences on Defender External Attack Surface Management
-
