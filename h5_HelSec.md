@@ -18,17 +18,18 @@ I managed to get a ticket for his event and ended up staying through the whole e
 
 All in all the event was quite pleasant. The venue was excellent for the purpose, there was even free pizza, for which I did not partake since I was tourist, let's not start free loading from the get go.
 
-So, on with the assignment, the show and the presentations. Since I was sitting at a nice spot in the audience, I ended up taking *a lot* of photos.
+So, on with the assignment, the show and the presentations. Since I was sitting at a nice spot in the audience, I ended up taking *a lot* of photos. 
+I must be honest, I sat through the whole show and didn't managed to ask any questions from the presenters...
 
 | Event start                               | Event schedule                            |
 | ----------------------------------------- | ----------------------------------------- |
-| ![Picture](/img/HelSec/IMG_0896.JPEG)     | ![Picture](/img/HelSec/IMG_0897.JPEG)     | 
+| ![Picture](/img/HelSec/IMG_0896.JPEG)     | ![Picture](/img/HelSec/IMG_0897.JPEG)     |
 
 ### Jos Helmich - Industrial Cyber Security
 
 | Topic                                     | Bio                                       |
 | ----------------------------------------- | ----------------------------------------- |
-| ![Picture](/img/HelSec/IMG_0899.JPEG)     | ![Picture](/img/HelSec/IMG_0901.JPEG)     | 
+| ![Picture](/img/HelSec/IMG_0899.JPEG)     | ![Picture](/img/HelSec/IMG_0901.JPEG)     |
 
 Jos works as a product security architect at Konecranes and is a member of the [ENISA](https://www.enisa.europa.eu/) (*European Union Agency for Cybersecurity*) advisory group.
 He has over thirty years of experience in software engineering.
@@ -56,7 +57,7 @@ The work of ENISA can be seen in regulations like the GDPR and directives like N
   - Details four risk levels based on the intended use:
     - Unacceptable risk : Social scoring, state monitoring
     - High risk : Medical devices, recruitment
-    - AI with specific transparency obligations (I would use the word *limited*, since it goes nicely with thw others) : Impersonation ("bots") 
+    - AI with specific transparency obligations (I would use the word *limited*, since it goes nicely with thw others) : Impersonation ("bots")
     - minimal or no risk
   - Adopted in 2024
 
@@ -67,7 +68,9 @@ I liked the comparison that Jos made with NIS-2 and CRA.
 | NIS-2                                     | CRA                                       |
 | ----------------------------------------- | ----------------------------------------- |
 | Keep you're house in order                | Don't mess up someone else's house        |
-| Don't buy bad or defective stuff          | Don't sell bad or defective stuff         | 
+| Don't buy bad or defective stuff          | Don't sell bad or defective stuff         |
+
+Jos's presentation was good and I brought up legal considerations in a form that was easy to follow and interesting. I must give five cheers and a hurrah for the network topology in secure manufacturing that was presented. Funny fact, the two ENISA members from Finland are not Native Finns. One is Dutch and another is from Germany.
 
 ### Jos's presentation photo gallery
 
@@ -81,6 +84,25 @@ I liked the comparison that Jos made with NIS-2 and CRA.
 | Topic                                     | Bio                                       |
 | ----------------------------------------- | ----------------------------------------- |
 | ![Picture](/img/HelSec/IMG_0916.JPEG)     | ![Picture](/img/HelSec/IMG_0917.JPEG)     |
+
+In my opinion Heikki's presentation was the most interesting one of the three, since it was quite hands on.
+Heikki is a tech lead and a hardware engineer at Traficom. He is aldo the man behind the DisObey badges.
+His presentation centered around RED (Radio Equipment Directive) and CRA (Cyber Resilience Act), also he presented on how he tested consumer devices on how they meet these requirements.
+
+Small brief on the acronyms:
+
+#### CRA (Cyber Resilience Act)
+
+- This was discussed earlier in Jos's presentation
+- Tries to fix the inadequate level of cybersecurity in many products, or inadequate security updates to such products and software.
+- Effectively forced from 2027 onwards.
+
+#### RED (Radio Equipment Directive)
+
+- Places a regulatory framework for radio equipment
+- Sets requirements for network security, protection of personal information of the users and protection from financial misuse.
+- Effectively forced from 2025 onwards.
+
 
 ### Heikki's presentation photo gallery
 
