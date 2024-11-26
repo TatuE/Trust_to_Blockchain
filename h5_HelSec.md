@@ -31,7 +31,43 @@ So, on with the assignment, the show and the presentations. Since I was sitting 
 | ![Picture](/img/HelSec/IMG_0899.JPEG)     | ![Picture](/img/HelSec/IMG_0901.JPEG)     | 
 
 Jos works as a product security architect at Konecranes and is a member of the [ENISA](https://www.enisa.europa.eu/) (*European Union Agency for Cybersecurity*) advisory group.
+He has over thirty years of experience in software engineering.
+Jos started the presentation by talking about ENISA and it's role on providing guidance and council for EU regulations and directives regarding cybersecurity. I appreciated that pointed out and made a clear distinction between EU regulations and directives.
 
+- Regulation => Law that must be applied in its entirety across the EU.
+- Directive => A legislative goal that EU member states must achieve, methods on how to archive this often varies between member states.
+
+Jos also talked about US and EU legislative difference on cybersecurity. The united states being a big player globally necessitates that these must be considered if planning on doing business in the US market. In short, the US is a combination of presidential executive orders (which might be temporary), policies and federal laws in contrast to the EU, which is unified on regulations and directives.
+
+The work of ENISA can be seen in regulations like the GDPR and directives like NIS-2, CRA and AIA.
+
+- GDPR (General Data Protection Regulation)
+  - Data protection law emphasizing information privacy for EU citizens
+  - Effectively in force since 2018
+- NIS-2 (Network and Information Security directive)
+  - Deals with corporate responsibilities regarding cybersecurity
+  - In force since 2023
+- CRA (Cyber Resilience Act)(Regulation)
+  - Details rules regarding digital products and their security
+  - Obligates the support for the entire product life cycle
+  - Adopted in 2024, Effectively forced in 2027.
+- AIA (Artificial Intelligence Act)
+  - a legal framework for the use of AI in EU.
+  - Details four risk levels based on the intended use:
+    - Unacceptable risk : Social scoring, state monitoring
+    - High risk : Medical devices, recruitment
+    - AI with specific transparency obligations (I would use the word *limited*, since it goes nicely with thw others) : Impersonation ("bots") 
+    - minimal or no risk
+  - Adopted in 2024
+
+To be honest, GDPR was mentioned in the presentation, but most of the taking was about NIS-2, CRA and AIA.
+
+I liked the comparison that Jos made with NIS-2 and CRA.
+
+| NIS-2                                     | CRA                                       |
+| ----------------------------------------- | ----------------------------------------- |
+| Keep you're house in order                | Don't mess up someone else's house        |
+| Don't buy bad or defective stuff          | Don't sell bad or defective stuff         | 
 
 ### Jos's presentation photo gallery
 
@@ -50,7 +86,7 @@ Jos works as a product security architect at Konecranes and is a member of the [
 
 |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| ![Picture](/img/HelSec/IMG_0916.JPEG)             | ![Picture](/img/HelSec/IMG_0917.JPEG)             | ![Picture](/img/HelSec/IMG_0918.JPEG)             | ![Picture](/img/HelSec/IMG_0919.JPEG)             | ![Picture](/img/HelSec/IMG_0920.JPEG)             | ![Picture](/img/HelSec/IMG_0922.JPEG)             | ![Picture](/img/HelSec/IMG_0923.JPEG)             | ![Picture](/img/HelSec/IMG_0924.JPEG)             |
+| ![Picture](/img/HelSec/IMG_0918.JPEG)             | ![Picture](/img/HelSec/IMG_0919.JPEG)             | ![Picture](/img/HelSec/IMG_0920.JPEG)             | ![Picture](/img/HelSec/IMG_0922.JPEG)             | ![Picture](/img/HelSec/IMG_0923.JPEG)             | ![Picture](/img/HelSec/IMG_0924.JPEG)             |                                                   |                                                   |
 | ![Picture](/img/HelSec/IMG_0925.JPEG)             | ![Picture](/img/HelSec/IMG_0927.JPEG)             | ![Picture](/img/HelSec/IMG_0928.JPEG)             | ![Picture](/img/HelSec/IMG_0929.JPEG)             | ![Picture](/img/HelSec/IMG_0931.JPEG)             | ![Picture](/img/HelSec/IMG_0932.JPEG)             | ![Picture](/img/HelSec/IMG_0933.JPEG)             | ![Picture](/img/HelSec/IMG_0934.JPEG)             |
 | ![Picture](/img/HelSec/IMG_0935.JPEG)             | ![Picture](/img/HelSec/IMG_0936.JPEG)             | ![Picture](/img/HelSec/IMG_0937.JPEG)             | ![Picture](/img/HelSec/IMG_0938.JPEG)             | ![Picture](/img/HelSec/IMG_0940.JPEG)             | ![Picture](/img/HelSec/IMG_0941.JPEG)             | ![Picture](/img/HelSec/IMG_0942.JPEG)             | ![Picture](/img/HelSec/IMG_0943.JPEG)             |
 
@@ -64,9 +100,9 @@ Jos works as a product security architect at Konecranes and is a member of the [
 | ----------------------------------------- | ----------------------------------------- |
 | ![Picture](/img/HelSec/IMG_0945.JPEG)     | ![Picture](/img/HelSec/IMG_0946.JPEG)     |
 
-Joona's presentation was very entertaining, he was a very good presenter and quite often the audience laughed at his comments.
-His presentation was about his experience with Azure EASM (External Attack Surface Management) offered by Microsoft and how it compares with an open source alternative OWASP AMASS. Joona has worked in IT for over twenty years, of which the last eight has been in cyber security.
+Joona's presentation was very entertaining, he was a very good presenter and quite often the audience laughed at his comments. Joona has worked in IT for over twenty years, of which the last eight has been in cyber security.
 
+His presentation was about his experience with Azure EASM (External Attack Surface Management) offered by Microsoft and how it compares with an open source alternative OWASP AMASS.
 
 ### Joona's presentation photo gallery
 
