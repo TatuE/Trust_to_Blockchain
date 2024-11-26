@@ -14,11 +14,11 @@ Full assignment can be viewed at the courses website : [h5 Helsec](https://terok
 
 ### Helsec November 2024 Meetup
 
-I managed to get a ticket for his event and ended up staying through the whole event (expect for networking and after party, it was a normal weekday after all).
+I managed to get a ticket for his event and ended up staying through the whole event (expect for the networking and after party, it was a normal weekday after all).
 
 All in all the event was quite pleasant. The venue was excellent for the purpose, there was even free pizza, for which I did not partake since I was tourist, let's not start free loading from the get go.
 
-So, on with the assignment, the show and the presentations. Since I was sitting in teh audience, I ended up taking *a lot* of photos.
+So, on with the assignment, the show and the presentations. Since I was sitting at a nice spot in the audience, I ended up taking *a lot* of photos.
 
 | Event start                               | Event schedule                            |
 | ----------------------------------------- | ----------------------------------------- |
@@ -30,7 +30,8 @@ So, on with the assignment, the show and the presentations. Since I was sitting 
 | ----------------------------------------- | ----------------------------------------- |
 | ![Picture](/img/HelSec/IMG_0899.JPEG)     | ![Picture](/img/HelSec/IMG_0901.JPEG)     | 
 
-Jos works as a product security architect at Konecranes and is a member of the [ENISA](https://www.enisa.europa.eu/) advisory group.
+Jos works as a product security architect at Konecranes and is a member of the [ENISA](https://www.enisa.europa.eu/) (*European Union Agency for Cybersecurity*) advisory group.
+
 
 ### Jos's presentation photo gallery
 
@@ -45,7 +46,7 @@ Jos works as a product security architect at Konecranes and is a member of the [
 | ----------------------------------------- | ----------------------------------------- |
 | ![Picture](/img/HelSec/IMG_0916.JPEG)     | ![Picture](/img/HelSec/IMG_0917.JPEG)     |
 
-### Heikkis presentation photo gallery
+### Heikki's presentation photo gallery
 
 |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
@@ -63,7 +64,9 @@ Jos works as a product security architect at Konecranes and is a member of the [
 | ----------------------------------------- | ----------------------------------------- |
 | ![Picture](/img/HelSec/IMG_0945.JPEG)     | ![Picture](/img/HelSec/IMG_0946.JPEG)     |
 
-### Joonas presentation photo gallery
+Joona's presentation was very entertaining, he was a very good presenter and quite often the audience laughed at his comments.
+
+### Joona's presentation photo gallery
 
 |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
