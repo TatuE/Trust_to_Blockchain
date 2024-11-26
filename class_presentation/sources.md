@@ -15,6 +15,10 @@
   - https://hackmag.com/security/very-bad-usb/
   - https://github.com/i-am-shodan/USBArmyKnife
 
+- Guide from the US government
+  - https://dl.dod.cyber.mil/wp-content/uploads/trn/online/disa_cac_2022_final_web/pdf/DISA_CAC2022_RemovableMedia_MobileDevices.pdf
+  - https://www.cisa.gov/sites/default/files/publications/RisksOfPortableDevices.pdf
+
 ### misc:
 
 - Storage Vulnerabilities
