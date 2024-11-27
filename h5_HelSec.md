@@ -154,9 +154,9 @@ In testing it was found out that most of the devices communicated securely, they
 
 Most concerning problems were that device or user data could not be removed from the device(by factory resetting)(With baremetal devices this was read directly from the NAND flash chip) or the uncertainty that personal data has been removed from the cloud, sharing private information with third parties and a complex chain in manufacturing (sellers don't know how the device works).
 
+#### Own opinion
 
-
-
+As I stated before, this presentation was my favorite of the three. I have some background with IoT and there have been occasions were I have had to do a bit of blackbox testing to find out how a specific devices works, so it can be monitored or controlled remotely and it was a pleasure watch Heikki's presentation. 
 
 ### Heikki's presentation photo gallery
 
@@ -179,6 +179,8 @@ Most concerning problems were that device or user data could not be removed from
 Joona's presentation was very entertaining, he was a very good presenter and quite often the audience laughed at his comments. Joona has worked in IT for over twenty years, of which the last eight has been in cyber security.
 
 His presentation was about his experience with Azure EASM (External Attack Surface Management) offered by Microsoft and how it compares with an open source alternative OWASP AMASS.
+
+
 
 ### Joona's presentation photo gallery
 
