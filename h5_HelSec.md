@@ -18,7 +18,7 @@ I managed to get a ticket for his event and ended up staying through the whole e
 
 All in all the event was quite pleasant. The venue was excellent for the purpose, there was even free pizza, for which I did not partake since I was tourist, let's not start free loading from the get go.
 
-So, on with the assignment, the show and the presentations. Since I was sitting at a nice spot in the audience, I ended up taking *a lot* of photos. 
+So, on with the assignment, the show and the presentations. Since I was sitting at a nice spot in the audience, I ended up taking *a lot* of photos.
 I must be honest, I sat through the whole show and didn't managed to ask any questions from the presenters...
 
 | Event start                               | Event schedule                            |
@@ -87,7 +87,7 @@ Jos's presentation was good and I brought up legal considerations in a form that
 
 In my opinion Heikki's presentation was the most interesting one of the three, since it was quite hands on.
 Heikki is a tech lead and a hardware engineer at Traficom. He is aldo the man behind the DisObey badges.
-His presentation centered around RED (Radio Equipment Directive) and CRA (Cyber Resilience Act), also he presented on how he tested consumer devices on how they meet these requirements.
+His presentation started with introducing RED (Radio Equipment Directive) and CRA (Cyber Resilience Act), after that he presented on how he tested consumer devices on how they meet these requirements.
 
 Small brief on the acronyms:
 
@@ -103,6 +103,9 @@ Small brief on the acronyms:
 - Sets requirements for network security, protection of personal information of the users and protection from financial misuse.
 - Effectively forced from 2025 onwards.
 
+Heikki also presented a very nice diagram he made evaluating RED
+
+![Red Picture - Copyright Zokol](https://github.com/Zokol/RED-CRA/blob/main/RED%20evaluation.png)
 
 ### Heikki's presentation photo gallery
 
