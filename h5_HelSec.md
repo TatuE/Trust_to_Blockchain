@@ -72,6 +72,8 @@ I liked the comparison that Jos made with NIS-2 and CRA.
 
 Jos's presentation was good and I brought up legal considerations in a form that was easy to follow and interesting. I must give five cheers and a hurrah for the network topology in secure manufacturing that was presented. Funny fact, the two ENISA members from Finland are not Native Finns. One is Dutch and another is from Germany.
 
+In hindsight, my question would have been on how are or are the US regulations taken into account when ENISA consults on new EU cybersecurity regulations and directives? Are there any special exemptions or solutions made?
+
 ### Jos's presentation photo gallery
 
 |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |                                                   |
@@ -156,7 +158,9 @@ Most concerning problems were that device or user data could not be removed from
 
 #### Own opinion
 
-As I stated before, this presentation was my favorite of the three. I have some background with IoT and there have been occasions were I have had to do a bit of blackbox testing to find out how a specific devices works, so it can be monitored or controlled remotely and it was a pleasure watch Heikki's presentation. 
+As I stated before, this presentation was my favorite of the three. I have some background with IoT and there have been occasions were I have had to do a bit of blackbox testing to find out how a specific devices works, so it can be monitored or controlled remotely and it was a pleasure watch Heikki's presentation.
+
+Again in hindsight, my question would have been how are the test results and RED / CRA violations handled with the suppliers and manufacturers?
 
 ### Heikki's presentation photo gallery
 
@@ -180,7 +184,22 @@ Joona's presentation was very entertaining, he was a very good presenter and qui
 
 His presentation was about his experience with Azure EASM (External Attack Surface Management) offered by Microsoft and how it compares with an open source alternative OWASP AMASS.
 
+#### What are EASM and AMASS?
 
+EASM is a software that used for finding, managing, and reducing risks related to internet-facing assets by monitoring attack surfaces and discovering vulnerability's. It gives an external view of the organizations infrastructure and aims to give the big picture of the organizations cybersecurity. AMASS is a open source implementation of this.
+
+#### Comparison of the two
+
+Microsoft EASM offers a graphical interface and according to Joona it offered a good user experience. AMASS can be operated on the command line but you can view infrastructure status from a web browser.
+Setting up the EASM is fast (~5 minutes), while the AMASS took Joona four hours to set up. Joona criticized the AMASS documentation for being lacking (*Poop* as he phrased it).
+Both applications  give results while they are scanning and scan times where comparable between the two.
+With both applications oyu can see the changes over time but with AMASS you need to do a bit of tinkering (solve the persistence of data).
+Since EASM is proprietary, it's not free. The pricing is depended on the assets you have (Domain, host etc.), Joona noted some discrepancies in the billing. You can add Microsoft Copilot to EASM but the price for that is high. As a proprietary product, you really don't know whats happening under the hood. AMASS on the other hand is an open source application, it's free to use. This usually comes with the good and bad, it's free but often it requires that you put in the hours to make it work as you want.
+Joona noted that AMASS is great for scripting.
+
+To be honest, while this presentation was a very entertaining one, I found a lack of interest on the EASM tool. I know that this kind of tools would most likely be great in any organization. I may have a bit of a attitude problem regarding Microsoft products and for that reason I found the AMASS more interesting, even though it proved a bit difficult to get to work.
+
+Once again in hindsight, my question would have been what improvements would have joona liked to be made in the EASM and would he believe that this could be (or is) a big hit with Azure?
 
 ### Joona's presentation photo gallery
 
