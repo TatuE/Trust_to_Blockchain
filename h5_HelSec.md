@@ -100,12 +100,63 @@ Small brief on the acronyms:
 #### RED (Radio Equipment Directive)
 
 - Places a regulatory framework for radio equipment
-- Sets requirements for network security, protection of personal information of the users and protection from financial misuse.
+- Sets requirements for network security (18031-1), protection of personal information of the users (18031-2) and protection from financial misuse (18031-3).
 - Effectively forced from 2025 onwards.
 
 Heikki also presented a very nice diagram he made evaluating RED
 
-![Red Picture - Copyright Zokol](https://github.com/Zokol/RED-CRA/blob/main/RED%20evaluation.png)
+![Red evaluation Picture - Copyright Zokol - Heikki Juva](https://github.com/Zokol/RED-CRA/blob/main/RED%20evaluation.png)
+
+According to Heikki Red has good and also problematic requirements.
+
+- Good requirements are:
+  - input validation
+  - vulncoor (vulnerability coordination and reporting to centralized authorities)
+  - cryptographic best practices
+  - strong passwords or the possibility for user to change password and content filtering (loading content form trusted sources only).
+
+- The problematic requirements are:
+  - compatibility (backwards compatibility may necessitate less secure solutions)
+  - Outsourcing security
+  - Paper-based evaluation
+
+#### Practical evaluation of RED with consumer devices
+
+For device testing Heikki presented a research question
+
+- *How do consumer devices communicate?*
+  - *To where?*
+  - *Why?*
+
+He talked about testing different consumer devices and how they evaluate under RED. The prerequisite for the selected devices were:
+
+- Must be available in the consumer-market
+- Needs to connect to the Internet
+- Are popular in the market, in the top 10 of the device category.
+
+The evaluation was done by blackbox testing, meaning that the device manufacturer was not consulted or the test was not performed by the device manufacturer. He noted that if you have manufacturer support (technical documents etc.) then there are better options for blackbox testing.
+
+The devices are classified in accordance with the RED requirements.
+
+- Does the device connect to the network? -> If so,  network security (18031-1) requirement applies
+- Does the device collect personal information? -> If so, protection of personal information of the users (18031-2) requirement applies
+- Does the device handle financial assets? -> If so,  protection from financial misuse (18031-3) requirement applies
+
+#### Practical example of a device evaluation
+
+To demonstrate blackbox evaluating a device using RED, Heikki presented the *Case Eagle* a baby monitoring camera that can be used by an iOS or Android application and it connects to the internet. It included a camera with a microphone and a wireless heartrate monitor band. By classifying this device it must apply to RED requirements 18031-1 and 18031-2.
+
+As an extra, Heikki demonstrated how he could read device information from the baby monitor after it was supposedly been factory reset. Heikki could extract passwords, ip-addresses and information on the original author.
+
+#### Over all analysis of tested devices
+
+In testing it was found out that most of the devices communicated securely, they used TLS version 1.3, encrypted the content and used certificate pinning (a security measure that links a host with their expected digital certificate).Since they are IoT devices by nature, to save energy they don't stay connected to the network all the time, establishing connection when needed. This makes monitoring testing a bit harder. Most of the devices were programmed on *baremetal*, so they don't have a operating system installed on them.
+
+Most concerning problems were that device or user data could not be removed from the device(by factory resetting)(With baremetal devices this was read directly from the NAND flash chip) or the uncertainty that personal data has been removed from the cloud, sharing private information with third parties and a complex chain in manufacturing (sellers don't know how the device works).
+
+
+
+
 
 ### Heikki's presentation photo gallery
 
