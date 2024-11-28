@@ -1,5 +1,7 @@
 # notes
 
+IEEE = Institute of Electrical and Electronics Engineers
+
 ## Malware exambles
 
 - Boot sector
