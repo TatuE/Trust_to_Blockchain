@@ -182,7 +182,42 @@ Then I started thinking, a *legitimate* tor site would serve people who can't us
 
 ## e
 
->- Don't stick that stick. How does PhishSticks attack work? Would a typical organization be vulnerable? Does this link to a broader category of attacks and defenses? How could the risk be mitigated? (This subtask does not require tests with a computer.) (If you want, you can view [PhishSticks on Github](https://github.com/therealhalonen/PhishSticks/) and [PhishSticks Youtube channel.](https://www.youtube.com/@phishsticks_pentest/videos))
+>- Don't stick that stick. How does PhishSticks attack work? Would a typical organization be vulnerable? Does this link to a broader category of attacks and defenses? How could the risk be mitigated? (This subtask does not require tests with a computer.) (If you want, you can view [PhishSticks on Github](https://github.com/therealhalonen/PhishSticks/) and [PhishSticks Youtube channel.](https://www.youtube.com/@phishsticks_pentest/videos))  
+
+For the sake of convenience, I'll split this to separate questions and answers.
+
+>How does PhishSticks attack work?
+
+In the PhishSticks attack the USB acts as an human interface device (HID), these are for instance keyboards and mice.
+In short, the USB firmware is manipulated to execute malicious code, once inserted.
+In this case the malicious code injects keystrokes to open Windows Run prompt and download the malware using powershell. In essence, the supposed "keyboard" is typing this.
+
+Computers are vulnerable for this because, well, USB devices are common and they need to work without issues.
+The computer recognizes the USB device by USB Enumeration, this tells the computer what device is connected and what drivers it needs to operate.
+In this case, if the USB stick tells it's a keyboard, the computer can't tell the difference.  
+
+>Would a typical organization be vulnerable?
+
+Yes they are, I could not see why not. USB sticks are so common and it only needs one person to injected the device to compromise the company.
+In the PhishSticks example, this of course assumes the company is a Windows company. Apple and Linux are not affected by powershell, "Windows button" + R or .LNK files, but then again Windows is still the dominant desktop operating system, I would guess that the percentage is like 80% of desktops, so I would say that constitutes the most cost effective segment to target.
+
+>Does this link to a broader category of attacks and defenses?
+
+
+
+>How could the risk be mitigated?
+
+I reviewed the PhishSticks GitHub page and they list an admirable list of mitigations for this kind of attack. These include:
+
+- **Don't plug in an unknown device!!**
+- Disable powershell for users
+  - This is a good one, because the average users most likely doesn't need this.
+- Disable the Windows run prompt ("Windows button" + R)
+  - Another reasonable mitigation, users seldom need this.
+- Disable the use of removable devices
+  - This is maybe a bit heavy handed approach, but very effective is needed.
+
+One tip from my hat, do you need you're USB ports? If not, then just block them with hot glue. This is of course a permanent solutions but also very effective in preventing from using USB devices.
 
 ## f
 
