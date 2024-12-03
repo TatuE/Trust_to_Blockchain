@@ -55,6 +55,8 @@ Links to assignment answers.
 ### Dingledine, Mathewson and Syverson 2004: Tor: The second-generation onion router. Chapter 3: 3 Design goals and assumptions
 The document summarized can be read at the MIT website : [Dingledine, Mathewson and Syverson 2004: Tor: The second-generation onion router.](https://css.csail.mit.edu/6.858/2022/readings/tor-design.pdf)
 
+The chapter details 
+
 ### Karunanayake, Ahmed, Malaney, Islam and Jha 2021: De-anonymisation attacks on tor: A survey
 The document summarized can be read at the IEEE website : [Karunanayake, Ahmed, Malaney, Islam and Jha 2021: De-anonymisation attacks on tor: A survey](https://ieeexplore.ieee.org/ielx7/9739/9621320/09471821.pdf)
 
@@ -64,6 +66,26 @@ The video can be viewed at the YouYube website : [Halonen, Ollikainen, Rajala 20
 ## a
 
 >- a) Install TOR browser and access TOR network (.onion addresses). (Explain in detail how you installed it, and how you got access to TOR).
+
+For this assignment, I used the [Arch Linux Wiki documentation](https://wiki.archlinux.org/title/Tor) on an updated system (-> *sudo pacman -Syu*)  
+**Note** The wiki article is quite short if you only intend to install the tor browser, most of the article details on how to run a Tor service on you're computer.
+
+So, let's install the Tor browser and test it.
+
+![picture](/img/tor_browser-1.png)
+
+Lets try a .onion address. but before that, we must connect to the tor network. Since I don't want to configure the connection, I'll just click *Connect* and we cant start surfing.
+
+| Connect                                   | Connected                                 |
+| ----------------------------------------- | ----------------------------------------- |
+| ![picture](/img/tor_browser-2.png)        | ![picture](/img/tor_browser-3.png)        |
+
+Let's go to an .onion address, anyone will do for this part of the assignment, so let's go to the DuckDuckGo .onion.  
+To get there, you do an empty search in the search field (next to the *Onionize* tab). Or more simply, just click on the search field and press enter.
+
+![picture](/img/tor_browser-4.png)
+
+**Note** It seems that DuckDuckGo can be used with Tor, but it only searches for clearnet addresses. To search for onion sites, we need to use another search engine. Tero mentioned previously Ahmia.fi, so we will continue with that one.
 
 ## b 
 
@@ -76,6 +98,79 @@ The video can be viewed at the YouYube website : [Halonen, Ollikainen, Rajala 20
 >    - forum
 >    - a well known organization (with regular postal addresses, offices or similar presence outside darknet)
 >  - Use .onion addresses inside TOR network, not regular (clearnet) websites trough exit nodes.
+
+### search engine for onion sites
+
+Like previously mentioned, I tried ahmia.fi  
+I appreciate that the tor browser offers a redirect to an .onion site if it's available.
+
+![picture](/img/tor_browser-5.png)
+
+The next sub-assignments will use ahmia as the search engine.  
+All in all, the search engine looks, well what a search engine should I guess.  
+All though I must note that the .onion site load quite slowly but selecting a new circuit for the site made the connection much faster.
+
+### human rights or civil rights organization
+
+Let's try amnesty international.
+
+If found the amnesty site via blink list. 
+
+| Ahmia search                          | Blinklist result                          | Amnesty .onion page                       |
+| ------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![picture](/img/tor_browser-6.png)    | ![picture](/img/tor_browser-7.png)         | ![picture](/img/tor_browser-8.png)       |
+
+
+### marketplace
+
+We will continue our quest with ahmia. Let's just search with *marketplace* and see what we find.  
+The first site seems to be Venus marketplace (*the best market place*?), let's see what it contains.  
+
+| Search                                    | Venus marketplace                         |
+| ----------------------------------------- | ----------------------------------------- |
+| ![picture](/img/tor_browser-9.png)        | ![picture](/img/tor_browser-10.png)       |
+
+I seems that the offering is what you would expect maybe.
+
+### fraud
+
+Let's continue using ahmia and search for fraud.  
+The fourth search result is *GothamCity*, this sounds promising, so let's go there :)  
+It seems that the main offering is credit card frauds.  
+Let's check the German offering.
+25$ for a credit card, payable in Bitcoin or Monero.
+
+| Ahmia search  for fraud               | GothamCity                                | German fraud offerings                    |
+| ------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![picture](/img/tor_browser-11.png)   | ![picture](/img/tor_browser-12.png)       | ![picture](/img/tor_browser-13.png)       |
+
+### forum
+
+Once again, we will use ahmia to search for a forum.
+The third result is *DarkNet Army - Carding and Hacking Forum*, sounds promising.
+Let's select a thread, Avast Database leak seems interesting.
+Well, well. The leak is old (2014) but I guess this qould be useful for some parties.
+
+| Ahmia search for forum                | DarkNet Army site                         | Avast database thread                     |
+| ------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![picture](/img/tor_browser-14.png)   | ![picture](/img/tor_browser-15.png)       | ![picture](/img/tor_browser-16.png)       |
+
+### a well known organization (with regular postal addresses, offices or similar presence outside darknet)
+
+I searched for a while with no luck, tried
+
+- Meta
+- MIT
+- Harvard
+- Linux foundation
+- Amazon (I really don't know why i tried this)
+- "a well known organization" (I felt desperate for a moment..)
+
+Then I started thinking, a *legitimate* tor site would serve people who can't use them in the clearnet for some reason. New's could be something that might fall in to this category and it I found out hat BBC does offer this!
+
+| Ahmia search for BBC                      | BBC tor sire                              |
+| ----------------------------------------- | ----------------------------------------- |
+| ![picture](/img/tor_browser-17.png)        | ![picture](/img/tor_browser-18.png)       |
 
 ## c
 
