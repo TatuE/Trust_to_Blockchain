@@ -53,15 +53,81 @@ Links to assignment answers.
 >  - Halonen, Ollikainen, Rajala 2023: [PhishSticks - The Ethical Hackers tool for BadUSB](https://www.youtube.com/watch?v=bDzVevtZiWE) (Video, about 3 minutes)
 
 ### Dingledine, Mathewson and Syverson 2004: Tor: The second-generation onion router. Chapter 3: 3 Design goals and assumptions
+
 The document summarized can be read at the MIT website : [Dingledine, Mathewson and Syverson 2004: Tor: The second-generation onion router.](https://css.csail.mit.edu/6.858/2022/readings/tor-design.pdf)
 
-The chapter details 
+The chapter details the design goals and assumptions regarding the Tor, it also details factors that are not desired, marked as *Non-Goals* and possible threat models.
+
+#### Design goals
+The design goals fall in to four (4) categories.
+
+- Deployability
+  - Must be easy to run and implement in the real world with no unnecessary burden (high bandwidth for example), liability or high costs on the operator.
+
+- Usability
+  - Most not be difficult to use
+    - Difficult systems will lead to fewer users and fewer users means less anonymity
+  - Should be easily configurable with out the need to modify familiar applications and be available to common operating systems
+  - Should not contain or introduce prohibitive delays on the users
+
+- Flexibility
+  - The protocol used must be flexible and well specified, so hopefully in the future the Tor design should not be reinvented.
+
+- Simple design
+  - The design should be well understood, simple and stable, containing proven and well understood security parameters.
+  - Additional features might add complexity
+  - Should not contain unproven techniques to compromise the design
+
+#### Non-goals for the design
+
+The non-Goals are stated to be
+
+- Not peer-to-peer
+  - The peer-to-peer model in decentralized environments still have many problems.
+  - Could be scaled with thousands of short lived servers, but these might be controlled my adversaries
+
+- Not secure against end-to-end attacks
+  - Tor does not intend or claim to be completely secure regarding end-to-end timing or intersection attacks
+
+- No protocol normalization
+  - Tor does not offer protocol normalization
+  - If users seeks anonymity from responders, they should layer Tor by using a filtering proxy
+
+- Not steganographic
+  - Tor does not try to conceal who is connected to the network
+
+#### Threat model
+
+- The Tor design assumes that a global passive adversary can observe at least some fraction of the network traffic
+  - The Tor design does no assume that it can protect the entirety of the network from attack
+  - Tor aims to prevent the adversary from analyzing the traffic patterns, so the adversary could not learn on which point of the network they should attack
+
+- The global passive adversaries aim is typically to observe both ends of the encrypted communication (initiator and the responder) to confirm traffic between two parties.
+
+- The possible adversary can employ multiple ways to try and compromise the network, these can include compromising routers or private keys, denying service (DoD) from trusted servers, with the aim to divert traffic to compromised servers, attacking nodes to decrease the networks readability.
+
 
 ### Karunanayake, Ahmed, Malaney, Islam and Jha 2021: De-anonymisation attacks on tor: A survey
+
 The document summarized can be read at the IEEE website : [Karunanayake, Ahmed, Malaney, Islam and Jha 2021: De-anonymisation attacks on tor: A survey](https://ieeexplore.ieee.org/ielx7/9739/9621320/09471821.pdf)
 
+
+
 ### Halonen, Ollikainen, Rajala 2023: PhishSticks - The Ethical Hackers tool for BadUSB
-The video can be viewed at the YouYube website : [Halonen, Ollikainen, Rajala 2023: PhishSticks - The Ethical Hackers tool for BadUSB](https://www.youtube.com/watch?v=bDzVevtZiWE)
+
+The video can be viewed at the YouTube website : [Halonen, Ollikainen, Rajala 2023: PhishSticks - The Ethical Hackers tool for BadUSB](https://www.youtube.com/watch?v=bDzVevtZiWE)
+
+In the video Halonen, Ollikainen and Rajala demonstrate their BadUsd dropper in a simulated corporation settings, to showcase dangers in using unknown USB devices.  
+A malicious USB stick is left for the CEO actor to inject to his computer, which when installed installs a keylogger the system. It should be noted that the BadUsb can be packaged with different payloads.
+
+The video describes the process well
+
+1. In insertion the the malicious payload injects keystrokes and download the malware using powershell
+2. The malware, keylogger in this case, records user input and saves them
+3. The compromised data is send to the attacker via HTTP post
+4. the malware removes the logged data after sending it, clearing traces of it's activities.
+
+I've seen this video before and find it very informative and entertaining. The results were very goog, considering this was done by bachelor student's on their school project that last only 16 weeks.
 
 ## a
 
@@ -166,7 +232,7 @@ I searched for a while with no luck, tried
 - Amazon (I really don't know why i tried this)
 - "a well known organization" (I felt desperate for a moment..)
 
-Then I started thinking, a *legitimate* tor site would serve people who can't use them in the clearnet for some reason. New's could be something that might fall in to this category and it I found out hat BBC does offer this!
+Then I started thinking, a *legitimate* tor site would serve people who can't use them in the clearnet for some reason. New's could be something that might fall in to this category and it I found out that BBC does offer this!
 
 | Ahmia search for BBC                      | BBC tor sire                              |
 | ----------------------------------------- | ----------------------------------------- |
