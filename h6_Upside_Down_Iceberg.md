@@ -329,8 +329,8 @@ Yes they are, I could not see why not. USB sticks are so common and it only need
 In the PhishSticks example, this of course assumes the company is a Windows company. Apple and Linux are not affected by powershell, "Windows button" + R or .LNK files, but then again Windows is still the dominant desktop operating system, I would guess that the percentage is like 80% of desktops, so I would say that constitutes the most cost effective segment to target.
 
 This does not mean that Apple or Linux system are safe from this kind of attack, just that they need they're own payload.  
-Now that I think of it, MacOs is based on BSD, so theoretically a shell (sh) script could work for both systems.  
-What can we learn from this, use shell (sh) in scripting if you don't need anything super special, since thats most likely already in the system, for instance in FreeBSD bash is not included on an fresh install and personally, I don't install it later.
+Now that I think of it, MacOs is based on BSD, so theoretically a shell (sh) could work for both systems.  
+What can we learn from this, use shell (sh) if you don't need anything super special, since thats most likely already in the system, for instance in FreeBSD, bash is not included on an fresh install and personally, I don't install it later.
 
 >Does this link to a broader category of attacks and defenses?
 
