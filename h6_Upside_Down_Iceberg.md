@@ -111,7 +111,50 @@ The non-Goals are stated to be
 
 The document summarized can be read at the IEEE website : [Karunanayake, Ahmed, Malaney, Islam and Jha 2021: De-anonymisation attacks on tor: A survey](https://ieeexplore.ieee.org/ielx7/9739/9621320/09471821.pdf)
 
+Tor is most likely the most used low latency, anonymous network in use today. This attracts legitimate users and services who seek to to stay hidden in their activities, these could include governmental organizations, like intelligence services or the military, people who can not use the web freely in their own country or location or are afraid of the implications if they do so. This also attracts parties that act in unlawful businesses, criminals. This is why de-anonymisation of the Tor network, it's users and services, has been of great interest to law enforcement and intelligence agencies alike.
 
+The Tor network is defined as a Overlay network (network that operates on top of another network, the Internet in this case) that is based on the Transmission Control Protocol (TCP, OSI layer 4) to establish a secure network connection between client and server. This system requires voluntary relays (nodes) to create a circuit (entry, middle and exit), which makes the secure connection possible.
+The Tor network consists of several key components:
+
+- Onion Proxy (OP)
+  - Software that is installed on the client device and is used to access the Tor network
+- Directory Servers (DS)
+  - Trusted servers that that offers the Onion Proxy details of the TOR network status. I see these as DNS servers in a way, since they help the OP in navigating the Tor network
+  - The OP selects three relays (nodes) from the DS to use in establishing a connection.
+- Entry Node/Guard
+  - First entrypoint to the Tor network from the OP. It knows the IP address of the client, which can cause security concerns if the node is compromised, this is why  Guard nodes are used. These are considered trusted by the DS.
+- Exit Node
+  - This is the last node on the way to the server and because of this, it knows the servers IP. Like with the entry node, if this is compromised, traffic can be monitored (if not using encryption, like TLS) and the location of the Server is compromised.
+- Hidden Services (HS)
+  - These are the services (servers) using a .onion address, also known a onion services.
+- Introduction Points
+ - Random nodes selected by the Hs to act as entry point to the service, usually the HS selects several entry points to avoid denial of service attacks (DoD). a three hop circuit is established (entry, middle, exit) with the server and the Introduction Point, this way the entry points don't know the IP address of the server. The introduction points is advertized to the DS and the OP can use these to access the hidden services.
+- Rendezvous Points (RPs)
+  - A random node selected by the OP to connect with the introduction points. a circuit (entry, middle, exit) is formed in the connection, to hide the clients IP address
+- Bridges
+  - Nodes that are no listed in the DS. Adds redundance and security to the network, since they are not advertized by the DS
+  - They replace guard nodes in the circuit
+
+The document details how a connection circuit is made and how circuit is established with a hidden service.
+
+The circuit connection is made when the onion proxy (OP) contacts the a directory server (DS) and receives a list of active relays. Th OP selects three relays for the circuit to acts as the entry, middle and exit node. Note that the entry node is a trusted guard node. Public keys are exchanged with the three nodes, one node at a time with corresponding nodes.
+
+To access a hidden service, the onion proxy must find the introduction point for that service from the directory server. After this the onion proxy establishes a circuit with a rendezvous point. The onion proxy then sends a message, informing of a connection request to the introduction point vie the rendezvous point, the introduction point forwards said message to the hidden service server. If the hidden service accepts the connection request, it forms it's own circuit with the rendezvous point and communicates with the onion proxy.
+
+The documents also presents a taxonomy for Tor related attacks.  
+These attacks fall in four (4) categories, with one having four (sub categories) 
+
+1. Network disruption
+2. De-anonymisation
+    1. Side channel
+    2. Entry and exit routers
+    3. OP/OR/server
+    4. Hybrid
+3. Censorship
+4. Generic
+
+As stated in the introduction, de-anonymisation attacks represent the larges segment in these.  
+These attacks fall in two categories, active and passive.
 
 ### Halonen, Ollikainen, Rajala 2023: PhishSticks - The Ethical Hackers tool for BadUSB
 
