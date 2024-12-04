@@ -104,7 +104,7 @@ The non-Goals are stated to be
 
 - The global passive adversaries aim is typically to observe both ends of the encrypted communication (initiator and the responder) to confirm traffic between two parties.
 
-- The possible adversary can employ multiple ways to try and compromise the network, these can include compromising routers or private keys, denying service (DoD) from trusted servers, with the aim to divert traffic to compromised servers, attacking nodes to decrease the networks readability.
+- The possible adversary can employ multiple ways to try and compromise the network, these can include compromising routers or private keys, denying service (DoS) from trusted servers, with the aim to divert traffic to compromised servers, attacking nodes to decrease the networks readability.
 
 
 ### Karunanayake, Ahmed, Malaney, Islam and Jha 2021: De-anonymisation attacks on tor: A survey
@@ -128,7 +128,7 @@ The Tor network consists of several key components:
 - Hidden Services (HS)
   - These are the services (servers) using a .onion address, also known a onion services.
 - Introduction Points
- - Random nodes selected by the Hs to act as entry point to the service, usually the HS selects several entry points to avoid denial of service attacks (DoD). a three hop circuit is established (entry, middle, exit) with the server and the Introduction Point, this way the entry points don't know the IP address of the server. The introduction points is advertized to the DS and the OP can use these to access the hidden services.
+ - Random nodes selected by the Hs to act as entry point to the service, usually the HS selects several entry points to avoid denial of service attacks (DoS). a three hop circuit is established (entry, middle, exit) with the server and the Introduction Point, this way the entry points don't know the IP address of the server. The introduction points is advertized to the DS and the OP can use these to access the hidden services.
 - Rendezvous Points (RPs)
   - A random node selected by the OP to connect with the introduction points. a circuit (entry, middle, exit) is formed in the connection, to hide the clients IP address
 - Bridges
@@ -285,9 +285,27 @@ Then I started thinking, a *legitimate* tor site would serve people who can't us
 
 >- Onion. In your own words, how does anonymity work in TOR? (e.g. how does it use: public keys, encryption, what algorithms? This subtask does not require tests with a computer.)
 
+Tor comes the the name *The Onion Router* and as I understood it, he inherent security is build on is working in layers (like in an onion).  
+The connection circuit ensures that the client information (IP, location) is not passed on along the chain, since the entry node is the only relay that knows this, but it does not know where the traffic is heading and the exit node knows where the traffic is heading, but not where it originates from.  
+Tor relies on public key cryptography for encryption and the relays also does the public key exchange in layers from relay to relay, meaning that there are multiple keys used, rather than a single from the client.   
+The key exchange is done using Diffie–Hellman handshake, in which public key cryptography (asymmetric keys) is used to form a session key (symmetric using), which is used to secure the communication between relays. Encryption algorithms used are RSA (public keys) and AES-CTR (symmetric key communication).
+
 ## d 
 
 >- d) What kind of the threat models could TOR fit? (This subtask does not require tests with a computer.)
+
+Since Tor is aimed to offer anonymity, I see this working for and against network security. 
+
+- Since the main target for Tor related attacks is de-anonymisation, users could fall prey for this and be compromised.
+  - I don't want to differentiate between the good and bad actors, since they both are at risk if a de-anonymisation attack succeeds
+- Tor is a nice place to hide
+  - This offers a safer place to operate command & control (C2) servers, which can be used to communicate with Control compromised systems.
+  - C2 servers offer a staging ground for example
+    - Botnets used in Distributed Denial of Service (DDoS) attacks
+    - Ransomware attacks
+      - as a communication point for negotiation
+    - Advanced Persistent Threats (APTs)
+    - Data Exfiltration from compromised hosts
 
 ## e
 
@@ -310,8 +328,42 @@ In this case, if the USB stick tells it's a keyboard, the computer can't tell th
 Yes they are, I could not see why not. USB sticks are so common and it only needs one person to injected the device to compromise the company.
 In the PhishSticks example, this of course assumes the company is a Windows company. Apple and Linux are not affected by powershell, "Windows button" + R or .LNK files, but then again Windows is still the dominant desktop operating system, I would guess that the percentage is like 80% of desktops, so I would say that constitutes the most cost effective segment to target.
 
+This does not mean that Apple or Linux system are safe from this kind of attack, just that they need they're own payload.  
+Now that I think of it, MacOs is based on BSD, so theoretically a shell (sh) script could work for both systems.  
+What can we learn from this, use shell (sh) in scripting if you don't need anything super special, since thats most likely already in the system, for instance in FreeBSD bash is not included on an fresh install and personally, I don't install it later.
+
 >Does this link to a broader category of attacks and defenses?
 
+Is see PhishSticks and BadUsb in general as the entry point for the target system and the selected payload determines what happens next.  
+In [Mitre ATT&CK matrix](https://attack.mitre.org/) this falls to the *Initial Access* category.
+
+In defense the PhishSticks attack is good for penetration testing  and it can demonstrate two points
+
+- Have the employees have been trained and follow that training.
+- If the system can be compromised, are the system and/or network defenses up to date regarding the selected attack, let's say for example ransomware or keylogging.
+
+In the attack side this offers a convenient way to gain entry to the system.  
+After the initial access, there opens a possibility of ways to further advance in the selected attack.  
+
+If we stick (or phishstick) with the Mitre ATT&CK matrix, the attack could move on as follows (this works for both offense and defense):
+
+**Note** that we assume that *Reconnaissance* and *Resource Development* (attack steps 1 and 2) are already done, since we a sticking a USB-drive to the system.
+
+| Attack step  | Tactic               | Technique                                 |
+| -------------| -------------------- | ----------------------------------------- |
+| 3            | Initial Access       | Replication Through Removable Media       |
+| 4            | Execution            | Command and Scripting Interpreter         |
+| 5            | Persistence          | Boot or Logon Initialization Scripts      |
+| 6            | Privilege Escalation | Abuse Elevation Control Mechanism         |
+| 7            | Defense Evasion      | Impair Defenses                           |
+| 8            | Credential Access    | Input Capture                             |
+| 9            | Discovery 	          | Account Discovery                         |
+| 10           | Lateral Movement     | Internal Spearphishing                    |
+| 11           | Collection           | Data from Network Shared Drive            |
+| 12           | Command and Control  | Protocol Tunneling                        |
+| 13           | Exfiltration         | Automated Exfiltration                    |
+| 14           | Impact               | Financial Theft                           |
+| 15           | Result               | Profit                                    |
 
 
 >How could the risk be mitigated?
