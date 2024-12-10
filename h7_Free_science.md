@@ -16,7 +16,25 @@ Full assignment can be viewed at the courses website : [h7 Free science!](https:
 >       - Peer reviewed: Pick an article on published on a journal that has JUFO rating 1, 2 or 3.
 >       - Fresh: Prefer fresh articles, less than 2 years old.
 
+### Article summary, review arcticle
 
+Article reviewed
+
+- **[Naqvi, B., Perova, K., Farooq, A., Makhdoom, I., Oyedeji, S. and Porras, J., 2023. Mitigation strategies against the phishing attacks: A systematic literature review. Computers & Security, p.103387.](https://www.sciencedirect.com/science/article/pii/S0167404823002973)**
+
+### Article summary, peer reviewed
+
+Article reviewed
+
+- **[Woods, N. and Siponen, M., 2024. How memory anxiety can influence password security behavior. Computers & Security, 137, p.103589](https://www.sciencedirect.com/science/article/pii/S0167404823004996?via%3Dihub).**
+  - Jufo portal: [Computers and security (JuhoID : 53963), jufo level 2](https://jfp.csc.fi/jufoportaali?Jufo_ID=53963)
+  - Tiedotutkimus.fi page : [How Memory Anxiety Can Influence Password Security Behavior](https://tiedejatutkimus.fi/fi/results/publication/0684013524)
+
+### Article summary, Fresh
+
+Article reviewed
+
+- [Admass, W.S., Munaye, Y.Y. and Diro, A.A., 2024. Cyber security: State of the art, challenges and future directions. Cyber Security and Applications, 2, p.100031.](https://www.sciencedirect.com/science/article/pii/S2772918423000188)
 
 ## a
 
