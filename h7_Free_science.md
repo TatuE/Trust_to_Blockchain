@@ -24,6 +24,8 @@ Article reviewed : Mitigation strategies against the phishing attacks: A systema
 
 - **[Naqvi, B., Perova, K., Farooq, A., Makhdoom, I., Oyedeji, S. and Porras, J., 2023. Mitigation strategies against the phishing attacks: A systematic literature review. Computers & Security, p.103387.](https://www.sciencedirect.com/science/article/pii/S0167404823002973)**
 
+### Summary
+
 ### Article summary, peer reviewed
 
 Article reviewed : How memory anxiety can influence password security behavior.
@@ -32,11 +34,17 @@ Article reviewed : How memory anxiety can influence password security behavior.
   - Jufo portal: [Computers and security (JuhoID : 53963), jufo level 2](https://jfp.csc.fi/jufoportaali?Jufo_ID=53963)
   - Tiedotutkimus.fi page : [How Memory Anxiety Can Influence Password Security Behavior](https://tiedejatutkimus.fi/fi/results/publication/0684013524)
 
+### Summary
+
+
+
 ### Article summary, Fresh
 
 Article reviewed : Cyber security: State of the art, challenges and future directions.
 
 - **[Admass, W.S., Munaye, Y.Y. and Diro, A.A., 2024. Cyber security: State of the art, challenges and future directions. Cyber Security and Applications, 2, p.100031.](https://www.sciencedirect.com/science/article/pii/S2772918423000188)**
+
+### Summary
 
 ## a
 
