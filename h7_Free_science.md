@@ -1,4 +1,4 @@
-# h7 Free science!
+# h7 Free science
 
 >*Follow the new science in infosec.*
 >
@@ -11,10 +11,10 @@ Full assignment can be viewed at the courses website : [h7 Free science!](https:
 ## x
 
 >- x) Read and summarize (briefly, e.g. with some bullets)
->    - Infosec review article.
->       - Review: Find review article on an infosec area you're interested in
->       - Peer reviewed: Pick an article on published on a journal that has JUFO rating 1, 2 or 3.
->       - Fresh: Prefer fresh articles, less than 2 years old.
+>   - Infosec review article.
+>     - Review: Find review article on an infosec area you're interested in
+>     - Peer reviewed: Pick an article on published on a journal that has JUFO rating 1, 2 or 3.
+>     - Fresh: Prefer fresh articles, less than 2 years old.
 
 ### Article summary, review arcticle
 
