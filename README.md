@@ -16,3 +16,4 @@ Course description can be found at the courses website [Trust to Blockchain 2024
 - [h4 to the moon!](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h4_To_the_moon.md)
 - [h5 HelSec](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h5_HelSec.md)
 - [h6 Upside Down Iceberg](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h6_Upside_Down_Iceberg.md)
+- [h7 free science](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h7_Free_science.md)
