@@ -19,7 +19,7 @@
 - H2 Pubkey
   - [h - Cryptopals: Challenge Set 1](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h2_Pubkey.md#h)
     - Project available at [The cryptopals crypto challenges](https://github.com/TatuE/the_cryptopals_crypto_challenges)
-    - I only managed to complete part 1, and part is 2 still under work. I may have concentrated more on the UX development than the actual task given..
+    - I only managed to complete part 1, and part is 2 still under work (part 2 finished per the assignment). I may have concentrated more on the UX development than the actual task given..
 - H3 Hash
   - [f -  Two minute job. Try cracking this hash and comment on your hash rate $2y$18$axMtQ4N8j/NQVItQJed9uORfsUK667RAWfycwFMtDBD6zAo1Se2eu . This subtask d does not require actually cracking the hash, just trying it and commenting on the hash rate.](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h3_Hash.md#f)
   - [g - Where do you want to go today? Crack this Windows NTLM hash: f2477a144dff4f216ab81f2ac3e3207d](https://github.com/TatuE/Trust_to_Blockchain_2024/blob/main/h3_Hash.md#g)
