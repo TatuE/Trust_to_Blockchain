@@ -85,7 +85,7 @@ cyber security threats affect many aspects of our local and global information s
 
 Cyber attacks have become very sophisticated and employ advanced techniques for exploit. APT:s (Advanced persistent threat) pose an increasing threat, they are organized and employ targeted campaign to endanger governmental, military and large private industry entities to gain economic, political, and/or strategic advantages.  
 
-The nature of cyber threats is continually evolving and consideration should be applied to secure and defend against this evolution.
+The nature of cyber threats are continually evolving and consideration should be applied to secure and defend against this evolution.
 
 - Zero-day attacks, that exploit unpatched vulnerabilities that may or may not be known, are challenging to protect against with the increasing number of interconnected systems.  
 - IoT devices have been and still are a concern to security, they can utilize poor encryption and data management methods, and often rely on wireless communication that makes them eavesdropping, interception, or data modification.  
