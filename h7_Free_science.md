@@ -26,6 +26,36 @@ Article reviewed : Lightweight cryptography algorithms for internet of things en
 
 - **[Shamala, L.M., Zayaraz, G., Vivekanandan, K. and Vijayalakshmi, V., 2021. Lightweight cryptography algorithms for internet of things enabled networks: An overview. In Journal of Physics: Conference Series (Vol. 1717, No. 1, p. 012072). IOP Publishing.](https://iopscience.iop.org/article/10.1088/1742-6596/1717/1/012072/meta)**
 
+IoT (Internet of Things), devices have become increasingly common in the world. Globally there is a network of billions of small devices that can communicate with one another and in most cases, can connect to the internet to communicate with servers and applications. Often they are low power devices, which makes them cheap and convenient to deploy for various purposes, like traffic control, environmental surveillance and home automation. 
+
+Cause IoT devices are often designed to be low power devices, with limited processing capabilities and storage space, security considerations are often superseded by operational requirements. Unsecure IoT devices offer a gateway for an attack and is often an easy target for hackers, if the device is Unprotected and vulnerable.  
+Efficient end-to-end encrypted communication is needed, but conventional cryptography methods are not suitable for these devices do to the resource limited design of th devices and to increase the security of IoT devices, a suitable method for cryptography should be implemented to ensure that data integrity and privacy could be achieve, with the least effect on device performance. The is a method for this, Lightweight cryptography (LWC), which is used in internet security protocols to provide adequate security.
+
+Design challenges regarding hardware and software implementations affect the decisions on a suitable lightweight cryptography algorithm. Memory and energy consumption, processor clock cycle and code size are the primary metric to determine the feasibility of a cryptography algorithm, because of restricted requirements, symmetric ciphers are more more ideal for this.
+The study tested 12 different lightweight ciphers to determine which of them would prove to be efficient for IoT device security.
+
+The tested algorithms were:
+
+- Chaskey
+- Chaskey-LTS
+- SPECK
+- SIMON
+- LEA
+- RECTANGLE
+- SPARX
+- AES
+- RC5-20
+- HIGHT
+- Fantomas
+- Robin
+
+The test results made evident, that Chaskey was the best performing algorithm, if a metrics were considered. 
+
+In designing IoT security, balancing the security, cost, and performance is a difficult task. The goal is to reach a level of  acceptable security, with limited impact on the device performance.
+
+#### Personal thoughts of the article
+
+This was the last article I reviewed of these three, and honestly I should have reserved more time writing it. The article it self was highly interesting. I did an IoT project in Haaga-Helia in 2018 utilizing LoRa for communication, with a LoRa receiver  connected to the internet and secure communication was an aspect that was thought off, but never implemented in the PoC. Lightweight cryptography as a concept is actually new for me, and I could imagine that I will be coming back to this subject in the future.
 
 ### Article summary, peer reviewed
 
