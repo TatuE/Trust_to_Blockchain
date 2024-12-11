@@ -114,16 +114,16 @@ The documents summarized can be read at the Mitre Corporation website: [Mitre AT
     - ATT&CK for Enterprise, focuses on enterprise IT-networks and cloud applications.  
     - ATT&CK for Mobile, focuses on mobile devices.
 - Consists of techniques for multiple systems and platforms, these include Windows, Linux, macOS, Android and iOS to name a few.
-- Focuses on tactics, techniques, and procedures (TTP:s) used by APT:s (Advanced Persistent Threat). [APT explained in the cyber Kill chain](h1_Adversarial_mindset.md#hutchins-et-al-2011-intelligence-driven-computer-network-defense-informed-by-analysis-of-adversary-campaigns-and-intrusion-kill-chains).
+- Focuses on 14 tactics that consists of different techniques and procedures (TTP:s) used by APT:s (Advanced Persistent Threat). [APT explained in the cyber Kill chain](h1_Adversarial_mindset.md#hutchins-et-al-2011-intelligence-driven-computer-network-defense-informed-by-analysis-of-adversary-campaigns-and-intrusion-kill-chains).
     - Tactics
         - Represents the "why" or more precisely the goal of the technique used by the threat actor.
-        - A tactic could be have the goal of: 
+        - A tactic could be have the goal of for example: 
             - Gaining vital information of a target (*Reconnaissance*).
             - Gaining access to the target system (*Initial Access*).
             - Achieving privilege escalation in the target system (*Privilege Escalation*).
     - Techniques
         - Represents the "how" to achieve the chosen tactic.  
-        - A technique could be:
+        - A technique could be for example:
             - Gathering target information by analyzing the target network (*Gather Victim Identity Information*).
             - Gaining initial access to the target system by exploiting a weakness in the target system (*Exploit Public-Facing Application*).
             - Achieving privilege escalation in the target system by abusing the systems elevation control mechanism (*Abuse Elevation Control Mechanism*).
@@ -131,7 +131,7 @@ The documents summarized can be read at the Mitre Corporation website: [Mitre AT
             - For instance, gathering target information by analyzing the target networks IP-addresses (*Gather Victim Network Information: IP Addresses*).
     - Procedures
         - Describes how a threat actor uses techniques and sub-techniques to achieve a chosen tactic.
-        - Procedures could be:
+        - Procedures could be for example:
             - A threat actor gathering target information by analyzing the target networks IP-addresses by using nmap (a network discovery and security auditing tool).
             - A threat actor gaining initial access to the target system by exploiting a weakness in the target system by using a SQL-injection.
             - A threat actor achieving privilege escalation in the target system, abusing the systems elevation control mechanism by using Cobalt Strike.
@@ -140,7 +140,7 @@ The documents summarized can be read at the Mitre Corporation website: [Mitre AT
     - Techniques are boxes under the header, you also could call them rows.
         - Sub-techniques (if available) are listed within the techniques.
     - Procedures are listed within a given technique and/or sub-technique.
-    - In the previous examples, precise ATT&CK Enterprise Matrix tactics, techniques and sub-techniques are within round brackets written in *italic*.   
+    - In the previous examples, precise ATT&CK Enterprise Matrix tactics, techniques and sub-techniques are within round brackets written in *italic*.
 - ATT&CK Enterprise Matrix consists of tactics in a logical and chronological order a threat actor would proceed in, from reconnaissance to impact.
 
 ## a
