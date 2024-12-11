@@ -18,15 +18,17 @@ Full assignment can be viewed at the courses website : [h7 Free science!](https:
 
 For this assignment I ended up looking at the subject with a broader scope in information security, instead of looking for a specific subjects like "brute force attack" or "BadUSb". The keywords in searches that were used are : "security vulnerability" and "information security". I think that the articles I found were quite interesting and enlightening.
 
-### Article summary, review arcticle
+### Article summary, review article
 
-Article reviewed : Information security management needs more holistic approach: A literature review.
+Article reviewed : Lightweight cryptography algorithms for internet of things enabled networks: An overview.
 
-- **[Soomro, Z.A., Shah, M.H. and Ahmed, J., 2016. Information security management needs more holistic approach: A literature review. International journal of information management, 36(2), pp.215-225.](https://www.sciencedirect.com/science/article/abs/pii/S0268401215001103)**
+- **[Shamala, L.M., Zayaraz, G., Vivekanandan, K. and Vijayalakshmi, V., 2021. Lightweight cryptography algorithms for internet of things enabled networks: An overview. In Journal of Physics: Conference Series (Vol. 1717, No. 1, p. 012072). IOP Publishing.](https://iopscience.iop.org/article/10.1088/1742-6596/1717/1/012072/meta)**
 
-https://www.sciencedirect.cos://www.sciencedirect.com/science/article/pii/S2772918423000188)**m/science/article/abs/pii/S0268401215001103
+##### Foreword
 
-### Summary
+I know that this article is a bit old, but the name was so appealing I chose it for this assignment.
+
+#### Summary
 
 ### Article summary, peer reviewed
 
@@ -36,7 +38,7 @@ Article reviewed : How memory anxiety can influence password security behavior.
   - Jufo portal: [Computers and security (JuhoID : 53963), jufo level 2](https://jfp.csc.fi/jufoportaali?Jufo_ID=53963)
   - Tiedotutkimus.fi page : [How Memory Anxiety Can Influence Password Security Behavior](https://tiedejatutkimus.fi/fi/results/publication/0684013524)
 
-### Summary
+#### Summary
 
 The way people handle passwords is becoming increasingly important, with the increasing amount of digital services used at home and at work.  
 The behavior of reusing or modifying passwords or using external memory storage mediums, like writing them down on a piece of paper, has become increasingly prevalent and poses a security threat, if passwords have been compromised from even one service.
@@ -62,7 +64,14 @@ Passwords and password security holds an important place in our everyday lives, 
 They protect valuable assets and because of this, many people develop fears that they will forget their passwords, which would cause inconvenience in accessing their services or even prevent the access, consequently this fear increases anxiety which often hinders their trust on their own capability to remember their passwords. This anxiety often leads to insecure password practices, which often pose a security risk for the person and the organization they are working for.
 
 When we better understand how anxiety can affect the persons security behaviors, we can try to implement better teaching and training methods that takes this in to consideration.
-The aim would be to incr
+
+#### Personal assessment of the article
+
+When I found this article I first considered it to be a bit off topic, but when examined, I found it to be insightful.  
+To better improve security practices, we must try to understand what aspects to consider, so insecure practices could be successfully remedied.  
+The relation of anxiety in insecure password handling was a new approach to me, but after reading the article made sense to me.  
+This of course could remedied by using a password manager to store the users passwords but in my opinion that would solve only half of the problem.  
+Finding a technical solution for a behavioral problem, does not entirely fix the underlying problem with the peoples tendency implement bad password practices, it will help to improve the situation non the less. 
 
 ### Article summary, Fresh
 
