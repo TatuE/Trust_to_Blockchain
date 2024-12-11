@@ -114,3 +114,7 @@ It brought up valid concerns on security and proposed interesting solutions to d
 ## a
 
 >- a) Voluntary: Create an alert that sends you new peer reviewed articles >on your area of intrest. Once it's working, remember to make the filter >tighter, so that you're happy when you recieve a message.
+
+I created alerts for subjects I found interesting. I'm quietly trying to distance my self from google, that's why I'm using my school gmail account.
+
+![Picture](/img/google_scholar_alerts.png)
